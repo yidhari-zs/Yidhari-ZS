@@ -1109,6 +1109,108 @@
         33446
       ],
       "tag": "EquipmentSuit_33400_Tag"
+    },
+    {
+      "id": 33500,
+      "name": "EquipmentSuit_33500_name",
+      "primary_condition": 2,
+      "unk_3": 0,
+      "primary_suit_ability": 0,
+      "primary_description": "EquipmentSuit_31400_2_des",
+      "secondary_condition": 4,
+      "unk_7": 0,
+      "secondary_suit_ability": 7484,
+      "secondary_description": "EquipmentSuit_31400_4_des",
+      "suit_icon": "",
+      "suit_story": "",
+      "suit_filter_option": "EquipmentSuit_33500_SuitFilterOption",
+      "suit_item_icon": "",
+      "unk_14": 0,
+      "order": 31,
+      "unk_16": 0,
+      "unk_17": 0,
+      "unk_18": 0,
+      "unk_19": 0,
+      "unk_20": 0,
+      "unk_21": 0,
+      "primary_suit_propertys": [
+        {
+          "property": 12102,
+          "value": 1000
+        }
+      ],
+      "unk_23": [
+        0
+      ],
+      "unk_24": 8,
+      "unk_25": [
+        0
+      ],
+      "unk_26": [
+        833520,
+        833530,
+        833540
+      ],
+      "unk_27": [
+        33541,
+        33542,
+        33543,
+        33544,
+        33545,
+        33546
+      ],
+      "tag": "EquipmentSuit_31400_Tag"
+    },
+    {
+      "id": 33600,
+      "name": "EquipmentSuit_33600_name",
+      "primary_condition": 2,
+      "unk_3": 0,
+      "primary_suit_ability": 0,
+      "primary_description": "EquipmentSuit_31400_2_des",
+      "secondary_condition": 4,
+      "unk_7": 0,
+      "secondary_suit_ability": 7700,
+      "secondary_description": "EquipmentSuit_31400_4_des",
+      "suit_icon": "",
+      "suit_story": "",
+      "suit_filter_option": "EquipmentSuit_33600_SuitFilterOption",
+      "suit_item_icon": "",
+      "unk_14": 0,
+      "order": 32,
+      "unk_16": 0,
+      "unk_17": 0,
+      "unk_18": 0,
+      "unk_19": 0,
+      "unk_20": 0,
+      "unk_21": 0,
+      "primary_suit_propertys": [
+        {
+          "property": 12102,
+          "value": 1000
+        }
+      ],
+      "unk_23": [
+        0
+      ],
+      "unk_24": 8,
+      "unk_25": [
+        0
+      ],
+      "unk_26": [
+        833620,
+        833630,
+        833640
+      ],
+      "unk_27": [
+        33641,
+        33642,
+        33643,
+        33644,
+        33645,
+        33646
+      ],
+      "tag": "EquipmentSuit_31400_Tag"
     }
   ]
 }

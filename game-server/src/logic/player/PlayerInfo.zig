@@ -57,7 +57,7 @@ pub fn init(uid: u32, allocator: Allocator) !Self {
         .nick_name = .init("ReversedRooms", null),
         .avatar_id = .init(2011),
         .player_avatar_id = .init(2011),
-        .control_guise_avatar_id = .init(1481),
+        .control_guise_avatar_id = .init(2011),
         .item_data = .init(allocator),
         .switch_data = .init(allocator),
         .misc_data = .init(allocator),

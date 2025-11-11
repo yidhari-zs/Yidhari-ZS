@@ -236,13 +236,59 @@ pub fn onAvatarSetAwakeCsReq(context: *NetContext, req: protocol.ByName(.AvatarS
             break :blk 1;
         };
 
-        if (avatar.awake_id != 0) {
-            avatar.awake_id = 0;
-        } else if (context.session.globals.templates.getAvatarTemplateConfig(avatar_id)) |config| {
-            if (config.battle_template.awake_ids.len != 0) {
-                avatar.awake_id = @intCast(config.battle_template.awake_ids[0]);
-            }
+        if (avatar.awake_id == 0) {
+            std.log.debug("AvatarSetAwakeCsReq: avatar {} does not have any awake unlocked", .{avatar_id});
+            break :blk 1;
         }
+
+        avatar.*.is_awake_enabled = req.is_awake_enabled;
+
+        break :blk 0;
+    };
+
+    return protocol.makeProto(.AvatarSetAwakeScRsp, .{
+        .retcode = retcode,
+    });
+}
+
+pub fn onAvatarUnlockAwakeCsReq(context: *NetContext, req: protocol.ByName(.AvatarUnlockAwakeCsReq)) !protocol.ByName(.AvatarUnlockAwakeScRsp) {
+    const retcode: i32 = blk: {
+        const avatar_id = protocol.getField(req, .avatar_id, u32) orelse break :blk 1;
+
+        const player = &context.session.player_info.?;
+        const avatar = player.item_data.getItemPtrAs(Avatar, avatar_id) orelse {
+            std.log.debug("AvatarUnlockAwakeCsReq: avatar {} is not unlocked", .{avatar_id});
+            break :blk 1;
+        };
+
+        const config = context.session.globals.templates.getAvatarTemplateConfig(avatar_id) orelse {
+            std.log.debug("AvatarUnlockAwakeCsReq: avatar {} config loading error", .{avatar_id});
+            break :blk 1;
+        };
+
+        var awake_id: u32 = 0;
+        var i: u8 = 0;
+        while (config.special_awaken_templates[i]) |template| : (i += 1) {
+            if (template.avatar_id == avatar_id and template.id > avatar.awake_id) {
+                awake_id = template.id;
+                var upgrade_item_arr: [ItemData.MAX_ITEMS_PER_BATCH]struct { u32, u32 } = undefined;
+                var upgrade_item_list = std.ArrayList(struct { u32, u32 }).initBuffer(&upgrade_item_arr);
+                for (template.upgrade_item_ids) |upgrade_item_id| {
+                    upgrade_item_list.appendAssumeCapacity(.{ upgrade_item_id, 1 });
+                }
+                if (!player.item_data.removeMultipleCurrencies(upgrade_item_list.items)) {
+                    break :blk 1;
+                }
+                break;
+            }
+            if (i == config.special_awaken_templates.len - 1) break;
+        }
+
+        if (avatar.awake_id == 0) {
+            avatar.*.is_awake_available = true;
+            avatar.*.is_awake_enabled = true;
+        }
+        avatar.*.awake_id = awake_id;
 
         break :blk 0;
     };

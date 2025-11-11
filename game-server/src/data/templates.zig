@@ -202,7 +202,7 @@ pub const MainCityObjectTemplate = struct {
     npc_name: []const u8,
     interact_name: []const u8,
     interact_shape: u32,
-    interact_scale: [5]f32 = @splat(0),
+    interact_scale: []const f32 = &.{},
     fan_interact_param: []const u8,
     focus_interact_scale: f32,
     default_interact_ids: []const u32 = &.{},
@@ -312,4 +312,11 @@ pub const BattleEventConfigTemplate = struct {
 pub const AvatarTemplateConfiguration = struct {
     base_template: *const AvatarBaseTemplate,
     battle_template: *const AvatarBattleTemplate,
+    special_awaken_templates: [6]?*const AvatarSpecialAwakenTemplate,
+};
+
+pub const AvatarSpecialAwakenTemplate = struct {
+    id: u32,
+    avatar_id: u32,
+    upgrade_item_ids: []const u32 = &.{},
 };

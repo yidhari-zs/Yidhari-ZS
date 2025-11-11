@@ -6,7 +6,7 @@
 - Walking
 - World Map
 - VR Training
-- Shiyu Defense and Deadly Assault
+- ~~Shiyu Defense and Deadly Assault~~
 - Miscellaneous items (Skins, W-Engines, Drive Discs, Wallpapers)
 
 ## Getting started
@@ -37,7 +37,7 @@ Configuration is loaded from current working directory. If no configuration file
 ##### NOTE: player data is currently not persistent (as there's basically nothing to save rn), so database is not needed.
 
 ### Logging in
-Currently supported client version is `CNBetaWin2.4.3`, you can get it from 3rd party sources. Next, you have to apply the necessary [client patch](https://git.xeondev.com/yidhari-zs/Tentacle). It allows you to connect to the local server and replaces encryption keys with custom ones.
+Currently supported client version is `CNBetaWin2.5.0`, you can get it from 3rd party sources. Next, you have to apply the necessary [client patch](https://git.xeondev.com/yidhari-zs/Tentacle). It allows you to connect to the local server and replaces encryption keys with custom ones.
 
 ## Support
 Your support for this project is greatly appreciated! If you'd like to contribute, feel free to send a tip [via Boosty](https://boosty.to/xeondev/donate)!

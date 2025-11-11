@@ -42,7 +42,7 @@ pub fn toProto(self: *Self, allocator: Allocator) !protocol.ByName(.MiscData) {
     protocol.setFields(&data, .{
         .business_card = protocol.makeProto(.BusinessCardData, .{}),
         .player_accessory = protocol.makeProto(.PlayerAccessoryData, .{
-            .control_guise_avatar_id = @as(u32, @intCast(1481)),
+            .control_guise_avatar_id = @as(u32, @intCast(2011)),
         }),
     });
 

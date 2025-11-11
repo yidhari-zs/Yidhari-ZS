@@ -3959,6 +3959,366 @@
       "disk_texture_path": "UI/Textures/3DSuit/FrontLabel/KingoftheSummit/3DSuitMoonlightLullaby06.tga",
       "play_music_tag": "UI/Textures/3DSuit/BackLabel/KingoftheSummit/3DSuitMoonlightLullaby06.tga",
       "pause_music_tag": "UI/Textures/3DSuit/Disk/3DSuitMoonlightLullaby.tga"
+    },
+    {
+      "item_id": 33521,
+      "equipment_type": 1,
+      "suit_type": 33500,
+      "front_label_texture_path": "",
+      "back_label_texture_path": "UI/3D/Role/Interface_Prop_Disk_03.prefab",
+      "disk_texture_path": "",
+      "play_music_tag": "",
+      "pause_music_tag": ""
+    },
+    {
+      "item_id": 33522,
+      "equipment_type": 2,
+      "suit_type": 33500,
+      "front_label_texture_path": "",
+      "back_label_texture_path": "UI/3D/Role/Interface_Prop_Disk_03.prefab",
+      "disk_texture_path": "",
+      "play_music_tag": "",
+      "pause_music_tag": ""
+    },
+    {
+      "item_id": 33523,
+      "equipment_type": 3,
+      "suit_type": 33500,
+      "front_label_texture_path": "",
+      "back_label_texture_path": "UI/3D/Role/Interface_Prop_Disk_03.prefab",
+      "disk_texture_path": "",
+      "play_music_tag": "",
+      "pause_music_tag": ""
+    },
+    {
+      "item_id": 33524,
+      "equipment_type": 4,
+      "suit_type": 33500,
+      "front_label_texture_path": "",
+      "back_label_texture_path": "UI/3D/Role/Interface_Prop_Disk_03.prefab",
+      "disk_texture_path": "",
+      "play_music_tag": "",
+      "pause_music_tag": ""
+    },
+    {
+      "item_id": 33525,
+      "equipment_type": 5,
+      "suit_type": 33500,
+      "front_label_texture_path": "",
+      "back_label_texture_path": "UI/3D/Role/Interface_Prop_Disk_03.prefab",
+      "disk_texture_path": "",
+      "play_music_tag": "",
+      "pause_music_tag": ""
+    },
+    {
+      "item_id": 33526,
+      "equipment_type": 6,
+      "suit_type": 33500,
+      "front_label_texture_path": "",
+      "back_label_texture_path": "UI/3D/Role/Interface_Prop_Disk_03.prefab",
+      "disk_texture_path": "",
+      "play_music_tag": "",
+      "pause_music_tag": ""
+    },
+    {
+      "item_id": 33531,
+      "equipment_type": 1,
+      "suit_type": 33500,
+      "front_label_texture_path": "",
+      "back_label_texture_path": "UI/3D/Role/Interface_Prop_Disk_02.prefab",
+      "disk_texture_path": "",
+      "play_music_tag": "",
+      "pause_music_tag": ""
+    },
+    {
+      "item_id": 33532,
+      "equipment_type": 2,
+      "suit_type": 33500,
+      "front_label_texture_path": "",
+      "back_label_texture_path": "UI/3D/Role/Interface_Prop_Disk_02.prefab",
+      "disk_texture_path": "",
+      "play_music_tag": "",
+      "pause_music_tag": ""
+    },
+    {
+      "item_id": 33533,
+      "equipment_type": 3,
+      "suit_type": 33500,
+      "front_label_texture_path": "",
+      "back_label_texture_path": "UI/3D/Role/Interface_Prop_Disk_02.prefab",
+      "disk_texture_path": "",
+      "play_music_tag": "",
+      "pause_music_tag": ""
+    },
+    {
+      "item_id": 33534,
+      "equipment_type": 4,
+      "suit_type": 33500,
+      "front_label_texture_path": "",
+      "back_label_texture_path": "UI/3D/Role/Interface_Prop_Disk_02.prefab",
+      "disk_texture_path": "",
+      "play_music_tag": "",
+      "pause_music_tag": ""
+    },
+    {
+      "item_id": 33535,
+      "equipment_type": 5,
+      "suit_type": 33500,
+      "front_label_texture_path": "",
+      "back_label_texture_path": "UI/3D/Role/Interface_Prop_Disk_02.prefab",
+      "disk_texture_path": "",
+      "play_music_tag": "",
+      "pause_music_tag": ""
+    },
+    {
+      "item_id": 33536,
+      "equipment_type": 6,
+      "suit_type": 33500,
+      "front_label_texture_path": "",
+      "back_label_texture_path": "UI/3D/Role/Interface_Prop_Disk_02.prefab",
+      "disk_texture_path": "",
+      "play_music_tag": "",
+      "pause_music_tag": ""
+    },
+    {
+      "item_id": 33541,
+      "equipment_type": 1,
+      "suit_type": 33500,
+      "front_label_texture_path": "",
+      "back_label_texture_path": "UI/3D/Role/Interface_Prop_Disk_01.prefab",
+      "disk_texture_path": "",
+      "play_music_tag": "",
+      "pause_music_tag": ""
+    },
+    {
+      "item_id": 33542,
+      "equipment_type": 2,
+      "suit_type": 33500,
+      "front_label_texture_path": "",
+      "back_label_texture_path": "UI/3D/Role/Interface_Prop_Disk_01.prefab",
+      "disk_texture_path": "",
+      "play_music_tag": "",
+      "pause_music_tag": ""
+    },
+    {
+      "item_id": 33543,
+      "equipment_type": 3,
+      "suit_type": 33500,
+      "front_label_texture_path": "",
+      "back_label_texture_path": "UI/3D/Role/Interface_Prop_Disk_01.prefab",
+      "disk_texture_path": "",
+      "play_music_tag": "",
+      "pause_music_tag": ""
+    },
+    {
+      "item_id": 33544,
+      "equipment_type": 4,
+      "suit_type": 33500,
+      "front_label_texture_path": "",
+      "back_label_texture_path": "UI/3D/Role/Interface_Prop_Disk_01.prefab",
+      "disk_texture_path": "",
+      "play_music_tag": "",
+      "pause_music_tag": ""
+    },
+    {
+      "item_id": 33545,
+      "equipment_type": 5,
+      "suit_type": 33500,
+      "front_label_texture_path": "",
+      "back_label_texture_path": "UI/3D/Role/Interface_Prop_Disk_01.prefab",
+      "disk_texture_path": "",
+      "play_music_tag": "",
+      "pause_music_tag": ""
+    },
+    {
+      "item_id": 33546,
+      "equipment_type": 6,
+      "suit_type": 33500,
+      "front_label_texture_path": "",
+      "back_label_texture_path": "UI/3D/Role/Interface_Prop_Disk_01.prefab",
+      "disk_texture_path": "",
+      "play_music_tag": "",
+      "pause_music_tag": ""
+    },
+    {
+      "item_id": 33621,
+      "equipment_type": 1,
+      "suit_type": 33600,
+      "front_label_texture_path": "",
+      "back_label_texture_path": "UI/3D/Role/Interface_Prop_Disk_03.prefab",
+      "disk_texture_path": "",
+      "play_music_tag": "",
+      "pause_music_tag": ""
+    },
+    {
+      "item_id": 33622,
+      "equipment_type": 2,
+      "suit_type": 33600,
+      "front_label_texture_path": "",
+      "back_label_texture_path": "UI/3D/Role/Interface_Prop_Disk_03.prefab",
+      "disk_texture_path": "",
+      "play_music_tag": "",
+      "pause_music_tag": ""
+    },
+    {
+      "item_id": 33623,
+      "equipment_type": 3,
+      "suit_type": 33600,
+      "front_label_texture_path": "",
+      "back_label_texture_path": "UI/3D/Role/Interface_Prop_Disk_03.prefab",
+      "disk_texture_path": "",
+      "play_music_tag": "",
+      "pause_music_tag": ""
+    },
+    {
+      "item_id": 33624,
+      "equipment_type": 4,
+      "suit_type": 33600,
+      "front_label_texture_path": "",
+      "back_label_texture_path": "UI/3D/Role/Interface_Prop_Disk_03.prefab",
+      "disk_texture_path": "",
+      "play_music_tag": "",
+      "pause_music_tag": ""
+    },
+    {
+      "item_id": 33625,
+      "equipment_type": 5,
+      "suit_type": 33600,
+      "front_label_texture_path": "",
+      "back_label_texture_path": "UI/3D/Role/Interface_Prop_Disk_03.prefab",
+      "disk_texture_path": "",
+      "play_music_tag": "",
+      "pause_music_tag": ""
+    },
+    {
+      "item_id": 33626,
+      "equipment_type": 6,
+      "suit_type": 33600,
+      "front_label_texture_path": "",
+      "back_label_texture_path": "UI/3D/Role/Interface_Prop_Disk_03.prefab",
+      "disk_texture_path": "",
+      "play_music_tag": "",
+      "pause_music_tag": ""
+    },
+    {
+      "item_id": 33631,
+      "equipment_type": 1,
+      "suit_type": 33600,
+      "front_label_texture_path": "",
+      "back_label_texture_path": "UI/3D/Role/Interface_Prop_Disk_02.prefab",
+      "disk_texture_path": "",
+      "play_music_tag": "",
+      "pause_music_tag": ""
+    },
+    {
+      "item_id": 33632,
+      "equipment_type": 2,
+      "suit_type": 33600,
+      "front_label_texture_path": "",
+      "back_label_texture_path": "UI/3D/Role/Interface_Prop_Disk_02.prefab",
+      "disk_texture_path": "",
+      "play_music_tag": "",
+      "pause_music_tag": ""
+    },
+    {
+      "item_id": 33633,
+      "equipment_type": 3,
+      "suit_type": 33600,
+      "front_label_texture_path": "",
+      "back_label_texture_path": "UI/3D/Role/Interface_Prop_Disk_02.prefab",
+      "disk_texture_path": "",
+      "play_music_tag": "",
+      "pause_music_tag": ""
+    },
+    {
+      "item_id": 33634,
+      "equipment_type": 4,
+      "suit_type": 33600,
+      "front_label_texture_path": "",
+      "back_label_texture_path": "UI/3D/Role/Interface_Prop_Disk_02.prefab",
+      "disk_texture_path": "",
+      "play_music_tag": "",
+      "pause_music_tag": ""
+    },
+    {
+      "item_id": 33635,
+      "equipment_type": 5,
+      "suit_type": 33600,
+      "front_label_texture_path": "",
+      "back_label_texture_path": "UI/3D/Role/Interface_Prop_Disk_02.prefab",
+      "disk_texture_path": "",
+      "play_music_tag": "",
+      "pause_music_tag": ""
+    },
+    {
+      "item_id": 33636,
+      "equipment_type": 6,
+      "suit_type": 33600,
+      "front_label_texture_path": "",
+      "back_label_texture_path": "UI/3D/Role/Interface_Prop_Disk_02.prefab",
+      "disk_texture_path": "",
+      "play_music_tag": "",
+      "pause_music_tag": ""
+    },
+    {
+      "item_id": 33641,
+      "equipment_type": 1,
+      "suit_type": 33600,
+      "front_label_texture_path": "",
+      "back_label_texture_path": "UI/3D/Role/Interface_Prop_Disk_01.prefab",
+      "disk_texture_path": "",
+      "play_music_tag": "",
+      "pause_music_tag": ""
+    },
+    {
+      "item_id": 33642,
+      "equipment_type": 2,
+      "suit_type": 33600,
+      "front_label_texture_path": "",
+      "back_label_texture_path": "UI/3D/Role/Interface_Prop_Disk_01.prefab",
+      "disk_texture_path": "",
+      "play_music_tag": "",
+      "pause_music_tag": ""
+    },
+    {
+      "item_id": 33643,
+      "equipment_type": 3,
+      "suit_type": 33600,
+      "front_label_texture_path": "",
+      "back_label_texture_path": "UI/3D/Role/Interface_Prop_Disk_01.prefab",
+      "disk_texture_path": "",
+      "play_music_tag": "",
+      "pause_music_tag": ""
+    },
+    {
+      "item_id": 33644,
+      "equipment_type": 4,
+      "suit_type": 33600,
+      "front_label_texture_path": "",
+      "back_label_texture_path": "UI/3D/Role/Interface_Prop_Disk_01.prefab",
+      "disk_texture_path": "",
+      "play_music_tag": "",
+      "pause_music_tag": ""
+    },
+    {
+      "item_id": 33645,
+      "equipment_type": 5,
+      "suit_type": 33600,
+      "front_label_texture_path": "",
+      "back_label_texture_path": "UI/3D/Role/Interface_Prop_Disk_01.prefab",
+      "disk_texture_path": "",
+      "play_music_tag": "",
+      "pause_music_tag": ""
+    },
+    {
+      "item_id": 33646,
+      "equipment_type": 6,
+      "suit_type": 33600,
+      "front_label_texture_path": "",
+      "back_label_texture_path": "UI/3D/Role/Interface_Prop_Disk_01.prefab",
+      "disk_texture_path": "",
+      "play_music_tag": "",
+      "pause_music_tag": ""
     }
   ]
 }

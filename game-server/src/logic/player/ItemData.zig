@@ -17,6 +17,8 @@ const Self = @This();
 
 const first_unique_id: u32 = 1 << 24;
 
+pub const MAX_ITEMS_PER_BATCH = 16;
+
 allocator: Allocator,
 item_uid_counter: u32,
 item_map: PropertyHashMap(u32, Item),
@@ -75,6 +77,39 @@ pub fn addCurrency(self: *Self, id: u32, amount: u32) !void {
     } });
 }
 
+pub fn removeCurrency(self: *Self, id: u32, amount: u32) bool {
+    const current = self.getItemCount(id);
+
+    if (current < amount) {
+        return false;
+    }
+
+    const item = self.item_map.getPtr(id) orelse return false;
+    item.*.currency.count = current - @as(i32, @intCast(amount));
+
+    return true;
+}
+
+pub fn removeMultipleCurrencies(self: *Self, params: []struct { u32, u32 }) bool {
+    if (params.len > MAX_ITEMS_PER_BATCH) {
+        return false;
+    }
+
+    var arr: [MAX_ITEMS_PER_BATCH]*Item = undefined;
+
+    for (params, 0..) |param, i| {
+        const id, const amount = param;
+        arr[i] = self.item_map.getPtr(id) orelse return false;
+        if (arr[i].*.currency.count < amount) return false;
+    }
+
+    for (params, 0..) |param, i| {
+        arr[i].*.currency.count -= @as(i32, @intCast(param[1]));
+    }
+
+    return true;
+}
+
 pub fn unlockAvatar(self: *Self, config: AvatarTemplateConfiguration) !void {
     if (config.base_template.camp == 0) return error.AvatarIsNotUnlockable;
 
@@ -84,6 +119,14 @@ pub fn unlockAvatar(self: *Self, config: AvatarTemplateConfiguration) !void {
     }
 
     try self.item_map.put(id, .{ .avatar = Avatar.init(config) });
+
+    var i: u8 = 0;
+    while (config.special_awaken_templates[i]) |template| : (i += 1) {
+        for (template.upgrade_item_ids) |upgrade_item_id| {
+            try self.addCurrency(upgrade_item_id, 1);
+        }
+        if (i == config.special_awaken_templates.len - 1) break;
+    }
 }
 
 pub fn unlockBuddy(self: *Self, template: BuddyBaseTemplate) !void {

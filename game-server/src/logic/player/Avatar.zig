@@ -54,6 +54,7 @@ dressed_equip: [equipment_num]?u32,
 show_weapon_type: ShowWeaponType,
 is_awake_available: bool,
 awake_id: u32,
+is_awake_enabled: bool,
 
 pub fn init(config: AvatarTemplateConfiguration) @This() {
     var skill_type_level: [AvatarSkillType.count]u32 = undefined;
@@ -76,8 +77,9 @@ pub fn init(config: AvatarTemplateConfiguration) @This() {
         .skill_type_level = skill_type_level,
         .dressed_equip = [_]?u32{null} ** equipment_num,
         .show_weapon_type = .active,
-        .is_awake_available = config.battle_template.awake_ids.len != 0,
+        .is_awake_available = false,
         .awake_id = 0,
+        .is_awake_enabled = false,
     };
 }
 
@@ -95,6 +97,7 @@ pub fn toProto(self: *const @This(), allocator: Allocator) !ByName(.AvatarInfo) 
         .show_weapon_type = @intFromEnum(self.show_weapon_type),
         .is_awake_available = self.is_awake_available,
         .awake_id = self.awake_id,
+        .is_awake_enabled = self.is_awake_enabled,
     });
 
     for (self.skill_type_level, 0..self.skill_type_level.len) |level, skill_type| {

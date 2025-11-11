@@ -133,12 +133,20 @@ pub const InteractInfo = struct {
         return .{ .id = id, .name = name };
     }
 
-    pub fn setScale(self: *@This(), scale: [5]f32) void {
-        self.scale_x = @floatCast(scale[0]);
-        self.scale_y = @floatCast(scale[1]);
-        self.scale_z = @floatCast(scale[2]);
-        self.scale_w = @floatCast(scale[3]);
-        self.scale_r = @floatCast(scale[4]);
+    pub fn setScale(self: *@This(), scale: []const f32) void {
+        if (scale.len == 5) {
+            self.scale_x = @floatCast(scale[0]);
+            self.scale_y = @floatCast(scale[1]);
+            self.scale_z = @floatCast(scale[2]);
+            self.scale_w = @floatCast(scale[3]);
+            self.scale_r = @floatCast(scale[4]);
+        } else if (scale.len == 1) {
+            self.scale_x = @floatCast(scale[0]);
+            self.scale_y = @floatCast(scale[0]);
+            self.scale_z = @floatCast(scale[0]);
+            self.scale_w = @floatCast(scale[0]);
+            self.scale_r = @floatCast(scale[0]);
+        }
     }
 
     pub fn setScaleFromConfig(self: *@This(), scale: InteractScaleCfg) void {

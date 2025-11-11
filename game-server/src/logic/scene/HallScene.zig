@@ -205,6 +205,7 @@ pub fn createNpc(self: *Self, section_id: u32, tag_id: u32) !void {
     for (template.default_interact_ids) |interact_id| {
         var interact = InteractInfo.init(interact_id, template.interact_name);
         interact.setScale(template.interact_scale);
+        // interact.setScale(@splat(0));
         unit.setInteract(.npc, interact);
     }
 

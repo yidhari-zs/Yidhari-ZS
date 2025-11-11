@@ -40,6 +40,7 @@ quest_config_template_tb: TemplateTb(templates.QuestConfigTemplate, .quest_id),
 hadal_zone_quest_template_tb: TemplateTb(templates.HadalZoneQuestTemplate, .layer_id),
 training_quest_template_tb: TemplateTb(templates.TrainingQuestTemplate, .id),
 battle_event_config_template_tb: TemplateTb(templates.BattleEventConfigTemplate, .id),
+avatar_special_awaken_template_tb: TemplateTb(templates.AvatarSpecialAwakenTemplate, .id),
 
 pub fn load(gpa: std.mem.Allocator) !Self {
     @setEvalBranchQuota(1_000_000);
@@ -78,7 +79,22 @@ pub fn getAvatarTemplateConfig(self: *const Self, avatar_id: u32) ?templates.Ava
     return .{
         .base_template = self.getConfigByKey(.avatar_base_template_tb, avatar_id) orelse return null,
         .battle_template = self.getConfigByKey(.avatar_battle_template_tb, avatar_id) orelse return null,
+        .special_awaken_templates = self.getAvatarSpecialAwakenConfigs(avatar_id),
     };
+}
+
+pub fn getAvatarSpecialAwakenConfigs(self: *const Self, avatar_id: u32) [6]?*const templates.AvatarSpecialAwakenTemplate {
+    var arr: [6]?*const templates.AvatarSpecialAwakenTemplate = @splat(null);
+
+    var idx: u32 = 0;
+    for (self.avatar_special_awaken_template_tb.payload.data) |*template| {
+        if (template.avatar_id == avatar_id) {
+            arr[idx] = template;
+            idx += 1;
+        }
+    }
+
+    return arr;
 }
 
 pub fn getAvatarLevelAdvanceTemplate(self: *const Self, avatar_id: u32, advance_id: u32) ?templates.AvatarLevelAdvanceTemplate {
