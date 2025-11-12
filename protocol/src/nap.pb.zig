@@ -3494,10 +3494,10 @@ pub const NHLKHFGBPKA = enum(i32) {
     _,
 };
 
-pub const BKAFIEGJJCH = enum(i32) {
-    BKAFIEGJJCH_MMIPNEOHFEB = 0,
-    BKAFIEGJJCH_PAGGCJPANGJ = 1,
-    BKAFIEGJJCH_BFJOIAOOBBJ = 2,
+pub const EntranceType = enum(i32) {
+    EntranceType_MMIPNEOHFEB = 0,
+    EntranceType_PAGGCJPANGJ = 1,
+    EntranceType_BFJOIAOOBBJ = 2,
     _,
 };
 
@@ -5681,12 +5681,12 @@ pub const HPCPFHKEJHF = enum(i32) {
     _,
 };
 
-pub const KMEMBEABFPE = enum(i32) {
-    KMEMBEABFPE_GOCKHJAAJKI = 0,
-    KMEMBEABFPE_PHHIPIILKMH = 1,
-    KMEMBEABFPE_MBEGDEDDJFI = 2,
-    KMEMBEABFPE_DGAJPCDLKII = 4,
-    KMEMBEABFPE_KPFFGOAIFLA = 8,
+pub const LayerStatus = enum(i32) {
+    LayerStatus_GOCKHJAAJKI = 0,
+    LayerStatus_PHHIPIILKMH = 1,
+    LayerStatus_MBEGDEDDJFI = 2,
+    LayerStatus_DGAJPCDLKII = 4,
+    LayerStatus_KPFFGOAIFLA = 8,
     _,
 };
 
@@ -7342,12 +7342,12 @@ pub const DDOGMBDJPED = enum(i32) {
     _,
 };
 
-pub const HAJEGKBMGBF = enum(i32) {
-    HAJEGKBMGBF_DPOJPNDHDJE = 0,
-    HAJEGKBMGBF_CCEDPIOBHMM = 1,
-    HAJEGKBMGBF_DFMGAJMFDDI = 2,
-    HAJEGKBMGBF_OLIEPFKDLAH = 3,
-    HAJEGKBMGBF_KDDCCJHDBHB = 4,
+pub const EntranceState = enum(i32) {
+    EntranceState_DPOJPNDHDJE = 0,
+    EntranceState_CCEDPIOBHMM = 1,
+    EntranceState_DFMGAJMFDDI = 2,
+    EntranceState_OLIEPFKDLAH = 3,
+    EntranceState_KDDCCJHDBHB = 4,
     _,
 };
 
@@ -9642,7 +9642,7 @@ pub const HEHMJICOMLM = struct {
 pub const OEPFCDGFKKP = struct {
     pb: protobuf.ProtobufMixins(@This()) = .{},
     MMPGIMELFOM: i64 = 0,
-    JGPGMFODMNN: i64 = 0,
+    end_timestamp: i64 = 0,
     BNDOFIMAJBO: ArrayList(u32) = .empty,
     FIEEMMLGNKL: u32 = 0,
     FIHAPKPLMNH: u32 = 0,
@@ -9676,7 +9676,7 @@ pub const OEPFCDGFKKP = struct {
 
     pub const _desc_table = .{
         .MMPGIMELFOM = fd(1, 3457, .{ .Varint = .Simple }),
-        .JGPGMFODMNN = fd(2, 11192, .{ .Varint = .Simple }),
+        .end_timestamp = fd(2, 11192, .{ .Varint = .Simple }),
         .BNDOFIMAJBO = fd(3, null, .{ .PackedList = .{ .Varint = .Simple } }),
         .FIEEMMLGNKL = fd(4, 2808, .{ .Varint = .Simple }),
         .FIHAPKPLMNH = fd(5, 15593, .{ .Varint = .Simple }),
@@ -9933,11 +9933,11 @@ pub const IGFCFJAEHBL = struct {
     pub const cmd_id: u16 = 9072;
 
     pb: protobuf.ProtobufMixins(@This()) = .{},
-    GJIKFMDHHCD: u32 = 0,
+    layer_item_id: u32 = 0,
     AKMDADIBIFC: u32 = 0,
 
     pub const _desc_table = .{
-        .GJIKFMDHHCD = fd(2, 13852, .{ .Varint = .Simple }),
+        .layer_item_id = fd(2, 13852, .{ .Varint = .Simple }),
         .AKMDADIBIFC = fd(10, 8588, .{ .Varint = .Simple }),
     };
 };
@@ -10275,7 +10275,7 @@ pub const DBDNPLBLHKC = struct {
 
 pub const FAEMOKOEHJK = struct {
     pb: protobuf.ProtobufMixins(@This()) = .{},
-    DJDICFKALLI: ArrayList(FAEMOKOEHJK.DJDICFKALLIEntry) = .empty,
+    properties: ArrayList(FAEMOKOEHJK.PropertiesEntry) = .empty,
     star: u32 = 0,
     level: u32 = 0,
     rank: u32 = 0,
@@ -10284,7 +10284,7 @@ pub const FAEMOKOEHJK = struct {
     BGGCHGCMEHB: u32 = 0,
 
     pub const _desc_table = .{
-        .DJDICFKALLI = fd(4, null, .{ .List = .{ .SubMessage = {} } }),
+        .properties = fd(4, null, .{ .List = .{ .SubMessage = {} } }),
         .star = fd(8, 8402, .{ .Varint = .Simple }),
         .level = fd(11, 8268, .{ .Varint = .Simple }),
         .rank = fd(12, 15384, .{ .Varint = .Simple }),
@@ -10293,7 +10293,7 @@ pub const FAEMOKOEHJK = struct {
         .BGGCHGCMEHB = fd(15, 3243, .{ .Varint = .Simple }),
     };
 
-    pub const DJDICFKALLIEntry = struct {
+    pub const PropertiesEntry = struct {
         pb: protobuf.ProtobufMixins(@This()) = .{},
         key: u32 = 0,
         value: i32 = 0,
@@ -10612,7 +10612,7 @@ pub const HACFDMCAOPN = struct {
 
     pb: protobuf.ProtobufMixins(@This()) = .{},
     HJPKGNMCHIJ: i32 = 0,
-    JGPGMFODMNN: ManagedString = .Empty,
+    end_timestamp: ManagedString = .Empty,
     MMPGIMELFOM: ManagedString = .Empty,
     CNFNGBOAEDP: i32 = 0,
     BLHBEHBCJJE: i32 = 0,
@@ -10624,7 +10624,7 @@ pub const HACFDMCAOPN = struct {
 
     pub const _desc_table = .{
         .HJPKGNMCHIJ = fd(2, 1114, .{ .Varint = .Simple }),
-        .JGPGMFODMNN = fd(3, null, .String),
+        .end_timestamp = fd(3, null, .String),
         .MMPGIMELFOM = fd(4, null, .String),
         .CNFNGBOAEDP = fd(7, 2315, .{ .Varint = .Simple }),
         .BLHBEHBCJJE = fd(8, 10810, .{ .Varint = .Simple }),
@@ -11501,7 +11501,7 @@ pub const FLMPLNKHBDO = struct {
 
     pb: protobuf.ProtobufMixins(@This()) = .{},
     IAGPEIGHLOM: ArrayList(KBKCOMONKHN) = .empty,
-    JGPGMFODMNN: ManagedString = .Empty,
+    end_timestamp: ManagedString = .Empty,
     KEGFLMGJDMD: i32 = 0,
     CNFNGBOAEDP: i32 = 0,
     BLHBEHBCJJE: i32 = 0,
@@ -11511,7 +11511,7 @@ pub const FLMPLNKHBDO = struct {
 
     pub const _desc_table = .{
         .IAGPEIGHLOM = fd(3, null, .{ .List = .{ .SubMessage = {} } }),
-        .JGPGMFODMNN = fd(5, null, .String),
+        .end_timestamp = fd(5, null, .String),
         .KEGFLMGJDMD = fd(7, 7715, .{ .Varint = .Simple }),
         .CNFNGBOAEDP = fd(8, 12310, .{ .Varint = .Simple }),
         .BLHBEHBCJJE = fd(10, 1161, .{ .Varint = .Simple }),
@@ -12109,7 +12109,7 @@ pub const NNGFNFANLJB = struct {
     GJLIHINHAHE: u32 = 0,
     EBIJHGDEDHC: u32 = 0,
     PKAGOEFOEJL: i64 = 0,
-    GJIKFMDHHCD: u32 = 0,
+    layer_item_id: u32 = 0,
     KAJPHOBJECH: u32 = 0,
     PBBHAMJABOD: u32 = 0,
     MHNJFKIEOIN: u32 = 0,
@@ -12135,7 +12135,7 @@ pub const NNGFNFANLJB = struct {
         .GJLIHINHAHE = fd(8, null, .{ .Varint = .Simple }),
         .EBIJHGDEDHC = fd(9, null, .{ .Varint = .Simple }),
         .PKAGOEFOEJL = fd(10, null, .{ .Varint = .Simple }),
-        .GJIKFMDHHCD = fd(11, null, .{ .Varint = .Simple }),
+        .layer_item_id = fd(11, null, .{ .Varint = .Simple }),
         .KAJPHOBJECH = fd(12, null, .{ .Varint = .Simple }),
         .PBBHAMJABOD = fd(13, null, .{ .Varint = .Simple }),
         .MHNJFKIEOIN = fd(14, null, .{ .Varint = .Simple }),
@@ -12497,11 +12497,11 @@ pub const BEOIIAOJOFH = struct {
 
     pb: protobuf.ProtobufMixins(@This()) = .{},
     HOJBGOIINAO: u32 = 0,
-    CILKAJCAJCJ: u32 = 0,
+    zone_id: u32 = 0,
 
     pub const _desc_table = .{
         .HOJBGOIINAO = fd(8, 3567, .{ .Varint = .Simple }),
-        .CILKAJCAJCJ = fd(13, 4389, .{ .Varint = .Simple }),
+        .zone_id = fd(13, 4389, .{ .Varint = .Simple }),
     };
 };
 
@@ -13702,7 +13702,7 @@ pub const QuestInfo = struct {
     PKEJOIPJBAF: ?JLHMJDKHFNK = null,
     unlock_time: i64 = 0,
     id: u32 = 0,
-    HOLKHLMIGAH: i64 = 0,
+    begin_timestamp: i64 = 0,
     state: QuestState = @enumFromInt(0),
     OIOKDEIKNOL: u32 = 0,
 
@@ -13716,7 +13716,7 @@ pub const QuestInfo = struct {
         .PKEJOIPJBAF = fd(7, null, .{ .SubMessage = {} }),
         .unlock_time = fd(8, 15253, .{ .Varint = .Simple }),
         .id = fd(9, 12529, .{ .Varint = .Simple }),
-        .HOLKHLMIGAH = fd(10, 8928, .{ .Varint = .Simple }),
+        .begin_timestamp = fd(10, 8928, .{ .Varint = .Simple }),
         .state = fd(13, null, .{ .Varint = .Simple }),
         .OIOKDEIKNOL = fd(14, 9236, .{ .Varint = .Simple }),
     };
@@ -13861,8 +13861,8 @@ pub const NJCPLMAIEBN = struct {
     pb: protobuf.ProtobufMixins(@This()) = .{},
     AJAEKNLMEOC: bool = false,
     MBPINECFHOE: u32 = 0,
-    JGPGMFODMNN: i64 = 0,
-    HOLKHLMIGAH: i64 = 0,
+    end_timestamp: i64 = 0,
+    begin_timestamp: i64 = 0,
     id: u32 = 0,
     CPPBHPLOEOD: ManagedString = .Empty,
     HLBBLOKCKBA: u32 = 0,
@@ -13872,8 +13872,8 @@ pub const NJCPLMAIEBN = struct {
     pub const _desc_table = .{
         .AJAEKNLMEOC = fd(2, null, .{ .Varint = .Simple }),
         .MBPINECFHOE = fd(5, 2783, .{ .Varint = .Simple }),
-        .JGPGMFODMNN = fd(6, 14852, .{ .Varint = .Simple }),
-        .HOLKHLMIGAH = fd(7, 10398, .{ .Varint = .Simple }),
+        .end_timestamp = fd(6, 14852, .{ .Varint = .Simple }),
+        .begin_timestamp = fd(7, 10398, .{ .Varint = .Simple }),
         .id = fd(9, 6143, .{ .Varint = .Simple }),
         .CPPBHPLOEOD = fd(10, null, .String),
         .HLBBLOKCKBA = fd(11, 16042, .{ .Varint = .Simple }),
@@ -14140,16 +14140,16 @@ pub const JPBMJEIEDAN = struct {
     };
 };
 
-pub const PFEDPPBJABG = struct {
+pub const EquipProperty = struct {
     pb: protobuf.ProtobufMixins(@This()) = .{},
-    IMCBPNOIIDK: u32 = 0,
-    JMMDGOBIBLO: u32 = 0,
-    BNJLJMHCCNM: u32 = 0,
+    base_value: u32 = 0,
+    key: u32 = 0,
+    add_value: u32 = 0,
 
     pub const _desc_table = .{
-        .IMCBPNOIIDK = fd(1, 1585, .{ .Varint = .Simple }),
-        .JMMDGOBIBLO = fd(13, 5440, .{ .Varint = .Simple }),
-        .BNJLJMHCCNM = fd(14, 7087, .{ .Varint = .Simple }),
+        .base_value = fd(1, 1585, .{ .Varint = .Simple }),
+        .key = fd(13, 5440, .{ .Varint = .Simple }),
+        .add_value = fd(14, 7087, .{ .Varint = .Simple }),
     };
 };
 
@@ -15350,7 +15350,7 @@ pub const PKJDIHMDDGG = struct {
     scene_perform: ?ScenePerformInfo = null,
     HBDLIJELKHF: u32 = 0,
     LMCBFPEHANE: ArrayList(DJACMKJBIOI) = .empty,
-    GJIKFMDHHCD: u32 = 0,
+    layer_item_id: u32 = 0,
     NBFIBFOHPMK: ArrayList(u32) = .empty,
     FFCLCNFDAMF: ArrayList(u32) = .empty,
     CGEOMEDHPLC: u32 = 0,
@@ -15361,7 +15361,7 @@ pub const PKJDIHMDDGG = struct {
         .scene_perform = fd(5, null, .{ .SubMessage = {} }),
         .HBDLIJELKHF = fd(6, 13789, .{ .Varint = .Simple }),
         .LMCBFPEHANE = fd(7, null, .{ .List = .{ .SubMessage = {} } }),
-        .GJIKFMDHHCD = fd(8, 4139, .{ .Varint = .Simple }),
+        .layer_item_id = fd(8, 4139, .{ .Varint = .Simple }),
         .NBFIBFOHPMK = fd(10, null, .{ .PackedList = .{ .Varint = .Simple } }),
         .FFCLCNFDAMF = fd(12, null, .{ .PackedList = .{ .Varint = .Simple } }),
         .CGEOMEDHPLC = fd(15, 3391, .{ .Varint = .Simple }),
@@ -18109,7 +18109,7 @@ pub const GGECJKPGHHC = struct {
     MCLACGIMOFJ: u32 = 0,
     HIGJIOCANMC: i64 = 0,
     JMDJAJGKEJO: u32 = 0,
-    JGPGMFODMNN: i64 = 0,
+    end_timestamp: i64 = 0,
     MHJBNKEPDJF: ManagedString = .Empty,
     GFLCHOLDEOD: ManagedString = .Empty,
     HJLFJJKIGFA: u32 = 0,
@@ -18118,7 +18118,7 @@ pub const GGECJKPGHHC = struct {
     DLPKAGEDPNM: u32 = 0,
     GCLIEIFDPMO: ArrayList(NPNANGOPJKN) = .empty,
     PJBMDLCMCBK: ManagedString = .Empty,
-    HOLKHLMIGAH: i64 = 0,
+    begin_timestamp: i64 = 0,
     JJPPGHDJNME: u32 = 0,
     JMMIMJNFKOM: u32 = 0,
     OLFJFNNFHFF: u32 = 0,
@@ -18131,7 +18131,7 @@ pub const GGECJKPGHHC = struct {
         .MCLACGIMOFJ = fd(1, 10305, .{ .Varint = .Simple }),
         .HIGJIOCANMC = fd(2, 8836, .{ .Varint = .Simple }),
         .JMDJAJGKEJO = fd(4, 3124, .{ .Varint = .Simple }),
-        .JGPGMFODMNN = fd(5, 6142, .{ .Varint = .Simple }),
+        .end_timestamp = fd(5, 6142, .{ .Varint = .Simple }),
         .MHJBNKEPDJF = fd(6, null, .String),
         .GFLCHOLDEOD = fd(7, null, .String),
         .HJLFJJKIGFA = fd(8, 669, .{ .Varint = .Simple }),
@@ -18140,7 +18140,7 @@ pub const GGECJKPGHHC = struct {
         .DLPKAGEDPNM = fd(11, 13686, .{ .Varint = .Simple }),
         .GCLIEIFDPMO = fd(12, null, .{ .List = .{ .SubMessage = {} } }),
         .PJBMDLCMCBK = fd(13, null, .String),
-        .HOLKHLMIGAH = fd(15, 1762, .{ .Varint = .Simple }),
+        .begin_timestamp = fd(15, 1762, .{ .Varint = .Simple }),
         .JJPPGHDJNME = fd(330, 2010, .{ .Varint = .Simple }),
         .JMMIMJNFKOM = fd(353, 7686, .{ .Varint = .Simple }),
         .OLFJFNNFHFF = fd(415, 8791, .{ .Varint = .Simple }),
@@ -18374,14 +18374,14 @@ pub const MEMHGCIOJDG = struct {
     OJNMMLDJLOG: i32 = 0,
     DIOFOMHBGFA: i32 = 0,
     NKGHBIIHODM: i32 = 0,
-    JMMDGOBIBLO: i32 = 0,
+    key: i32 = 0,
 
     pub const _desc_table = .{
         .IGKFHJKFBAC = fd(2, 4757, .{ .Varint = .Simple }),
         .OJNMMLDJLOG = fd(6, 5108, .{ .Varint = .Simple }),
         .DIOFOMHBGFA = fd(7, 2257, .{ .Varint = .Simple }),
         .NKGHBIIHODM = fd(8, 2904, .{ .Varint = .Simple }),
-        .JMMDGOBIBLO = fd(12, 4386, .{ .Varint = .Simple }),
+        .key = fd(12, 4386, .{ .Varint = .Simple }),
     };
 };
 
@@ -19672,13 +19672,13 @@ pub const OPCKPFKDGPJ = struct {
     pub const cmd_id: u16 = 2247;
 
     pb: protobuf.ProtobufMixins(@This()) = .{},
-    GJIKFMDHHCD: u32 = 0,
+    layer_item_id: u32 = 0,
     avatar_id_list: ArrayList(u32) = .empty,
     KAJPHOBJECH: u32 = 0,
     AKMDADIBIFC: u32 = 0,
 
     pub const _desc_table = .{
-        .GJIKFMDHHCD = fd(1, 11519, .{ .Varint = .Simple }),
+        .layer_item_id = fd(1, 11519, .{ .Varint = .Simple }),
         .avatar_id_list = fd(4, null, .{ .PackedList = .{ .Varint = .Simple } }),
         .KAJPHOBJECH = fd(7, 2385, .{ .Varint = .Simple }),
         .AKMDADIBIFC = fd(14, 6719, .{ .Varint = .Simple }),
@@ -21188,13 +21188,13 @@ pub const CPHLBNINHBH = struct {
 pub const GEOAMFMPFJK = struct {
     pb: protobuf.ProtobufMixins(@This()) = .{},
     FBEEAAEBBNM: u32 = 0,
-    HOLKHLMIGAH: u64 = 0,
-    JGPGMFODMNN: u64 = 0,
+    begin_timestamp: u64 = 0,
+    end_timestamp: u64 = 0,
 
     pub const _desc_table = .{
         .FBEEAAEBBNM = fd(1, null, .{ .Varint = .Simple }),
-        .HOLKHLMIGAH = fd(2, null, .{ .Varint = .Simple }),
-        .JGPGMFODMNN = fd(3, null, .{ .Varint = .Simple }),
+        .begin_timestamp = fd(2, null, .{ .Varint = .Simple }),
+        .end_timestamp = fd(3, null, .{ .Varint = .Simple }),
     };
 };
 
@@ -21256,11 +21256,11 @@ pub const OOLPGFPLCJK = struct {
     pub const cmd_id: u16 = 3557;
 
     pb: protobuf.ProtobufMixins(@This()) = .{},
-    BHMFPGNPBKF: u32 = 0,
+    entrance_id: u32 = 0,
     PJBAJEAKLDE: u32 = 0,
 
     pub const _desc_table = .{
-        .BHMFPGNPBKF = fd(2, 5001, .{ .Varint = .Simple }),
+        .entrance_id = fd(2, 5001, .{ .Varint = .Simple }),
         .PJBAJEAKLDE = fd(6, 14872, .{ .Varint = .Simple }),
     };
 };
@@ -21564,7 +21564,7 @@ pub const CEDBAGIPHAG = struct {
     BJJEGDOECDK: u32 = 0,
     rank: PGDHGALOOOF = @enumFromInt(0),
     type: FFHDJJOMNHM = @enumFromInt(0),
-    GJIKFMDHHCD: u32 = 0,
+    layer_item_id: u32 = 0,
 
     pub const _desc_table = .{
         .AKMDADIBIFC = fd(1, 12061, .{ .Varint = .Simple }),
@@ -21576,7 +21576,7 @@ pub const CEDBAGIPHAG = struct {
         .BJJEGDOECDK = fd(12, 7050, .{ .Varint = .Simple }),
         .rank = fd(13, null, .{ .Varint = .Simple }),
         .type = fd(14, null, .{ .Varint = .Simple }),
-        .GJIKFMDHHCD = fd(15, 4227, .{ .Varint = .Simple }),
+        .layer_item_id = fd(15, 4227, .{ .Varint = .Simple }),
     };
 };
 
@@ -24274,29 +24274,29 @@ pub const OAKNKKJPOCP = struct {
     };
 };
 
-pub const LKIHGHDPGPK = struct {
+pub const StartHadalZoneBattleCsReq = struct {
     pub const cmd_id: u16 = 7643;
 
     pb: protobuf.ProtobufMixins(@This()) = .{},
     OFPJHIOGEAL: bool = false,
-    NAAENBLCODA: ArrayList(u32) = .empty,
-    DBIJHJBPJBC: u32 = 0,
-    AECDPBNDAGO: u32 = 0,
-    CILKAJCAJCJ: u32 = 0,
-    NINGBPNBJBL: u32 = 0,
-    JADKDKDEECM: ArrayList(u32) = .empty,
-    GJIKFMDHHCD: u32 = 0,
+    first_room_avatar_id_list: ArrayList(u32) = .empty,
+    layer_index: u32 = 0,
+    first_room_buddy_id: u32 = 0,
+    zone_id: u32 = 0,
+    second_room_buddy_id: u32 = 0,
+    second_room_avatar_id_list: ArrayList(u32) = .empty,
+    layer_item_id: u32 = 0,
     IJIKKGDCAIE: u32 = 0,
 
     pub const _desc_table = .{
         .OFPJHIOGEAL = fd(4, null, .{ .Varint = .Simple }),
-        .NAAENBLCODA = fd(5, null, .{ .PackedList = .{ .Varint = .Simple } }),
-        .DBIJHJBPJBC = fd(6, 11685, .{ .Varint = .Simple }),
-        .AECDPBNDAGO = fd(8, 1375, .{ .Varint = .Simple }),
-        .CILKAJCAJCJ = fd(9, 4116, .{ .Varint = .Simple }),
-        .NINGBPNBJBL = fd(10, 12200, .{ .Varint = .Simple }),
-        .JADKDKDEECM = fd(13, null, .{ .PackedList = .{ .Varint = .Simple } }),
-        .GJIKFMDHHCD = fd(14, 14929, .{ .Varint = .Simple }),
+        .first_room_avatar_id_list = fd(5, null, .{ .PackedList = .{ .Varint = .Simple } }),
+        .layer_index = fd(6, 11685, .{ .Varint = .Simple }),
+        .first_room_buddy_id = fd(8, 1375, .{ .Varint = .Simple }),
+        .zone_id = fd(9, 4116, .{ .Varint = .Simple }),
+        .second_room_buddy_id = fd(10, 12200, .{ .Varint = .Simple }),
+        .second_room_avatar_id_list = fd(13, null, .{ .PackedList = .{ .Varint = .Simple } }),
+        .layer_item_id = fd(14, 14929, .{ .Varint = .Simple }),
         .IJIKKGDCAIE = fd(15, 10796, .{ .Varint = .Simple }),
     };
 };
@@ -24635,16 +24635,16 @@ pub const LKNAPJJAAOA = struct {
 pub const JNIEPODPCIA = struct {
     pb: protobuf.ProtobufMixins(@This()) = .{},
     KAJPHOBJECH: u32 = 0,
-    DJDICFKALLI: ArrayList(JNIEPODPCIA.DJDICFKALLIEntry) = .empty,
+    properties: ArrayList(JNIEPODPCIA.PropertiesEntry) = .empty,
     type: FHNFDOIHCCK = @enumFromInt(0),
 
     pub const _desc_table = .{
         .KAJPHOBJECH = fd(1, null, .{ .Varint = .Simple }),
-        .DJDICFKALLI = fd(2, null, .{ .List = .{ .SubMessage = {} } }),
+        .properties = fd(2, null, .{ .List = .{ .SubMessage = {} } }),
         .type = fd(3, null, .{ .Varint = .Simple }),
     };
 
-    pub const DJDICFKALLIEntry = struct {
+    pub const PropertiesEntry = struct {
         pb: protobuf.ProtobufMixins(@This()) = .{},
         key: u32 = 0,
         value: i32 = 0,
@@ -24656,23 +24656,23 @@ pub const JNIEPODPCIA = struct {
     };
 };
 
-pub const DPMHOMKBFGM = struct {
+pub const AvatarUnitInfo = struct {
     pb: protobuf.ProtobufMixins(@This()) = .{},
     avatar_id: u32 = 0,
-    DJDICFKALLI: ArrayList(DPMHOMKBFGM.DJDICFKALLIEntry) = .empty,
+    properties: ArrayList(AvatarUnitInfo.PropertiesEntry) = .empty,
     AONFHBBNNHD: bool = false,
     OOCKGOHHJAH: ArrayList(u32) = .empty,
     HFFKAIBIHIC: bool = false,
     LJDEMBDGMPL: i32 = 0,
     PLIADNGDHIL: bool = false,
     LMFNPGFBNJP: u32 = 0,
-    CHENBMLDBCL: ArrayList(DPMHOMKBFGM.CHENBMLDBCLEntry) = .empty,
-    NONEDLADGHK: ArrayList(DPMHOMKBFGM.NONEDLADGHKEntry) = .empty,
+    CHENBMLDBCL: ArrayList(AvatarUnitInfo.CHENBMLDBCLEntry) = .empty,
+    NONEDLADGHK: ArrayList(AvatarUnitInfo.NONEDLADGHKEntry) = .empty,
     HGJKOAIEAHA: u32 = 0,
 
     pub const _desc_table = .{
         .avatar_id = fd(1, null, .{ .Varint = .Simple }),
-        .DJDICFKALLI = fd(2, null, .{ .List = .{ .SubMessage = {} } }),
+        .properties = fd(2, null, .{ .List = .{ .SubMessage = {} } }),
         .AONFHBBNNHD = fd(3, null, .{ .Varint = .Simple }),
         .OOCKGOHHJAH = fd(4, null, .{ .PackedList = .{ .Varint = .Simple } }),
         .HFFKAIBIHIC = fd(5, null, .{ .Varint = .Simple }),
@@ -24684,7 +24684,7 @@ pub const DPMHOMKBFGM = struct {
         .HGJKOAIEAHA = fd(11, null, .{ .Varint = .Simple }),
     };
 
-    pub const DJDICFKALLIEntry = struct {
+    pub const PropertiesEntry = struct {
         pb: protobuf.ProtobufMixins(@This()) = .{},
         key: u32 = 0,
         value: i32 = 0,
@@ -25108,16 +25108,16 @@ pub const CACNJNKDMGE = struct {
 
 pub const FPGPLHKIMLB = struct {
     pb: protobuf.ProtobufMixins(@This()) = .{},
-    PEOEHCGMENP: ?IOCDIBNLAFE = null,
-    BHMFPGNPBKF: u32 = 0,
-    EPEJOCEICJB: ?IOCDIBNLAFE = null,
+    PEOEHCGMENP: ?ZoneRecord = null,
+    entrance_id: u32 = 0,
+    EPEJOCEICJB: ?ZoneRecord = null,
     FJBAAHJPPBI: ArrayList(u32) = .empty,
-    state: HAJEGKBMGBF = @enumFromInt(0),
-    AANEHFFMFKJ: ArrayList(IOCDIBNLAFE) = .empty,
+    state: EntranceState = @enumFromInt(0),
+    AANEHFFMFKJ: ArrayList(ZoneRecord) = .empty,
 
     pub const _desc_table = .{
         .PEOEHCGMENP = fd(5, null, .{ .SubMessage = {} }),
-        .BHMFPGNPBKF = fd(6, 8775, .{ .Varint = .Simple }),
+        .entrance_id = fd(6, 8775, .{ .Varint = .Simple }),
         .EPEJOCEICJB = fd(7, null, .{ .SubMessage = {} }),
         .FJBAAHJPPBI = fd(9, null, .{ .PackedList = .{ .Varint = .Simple } }),
         .state = fd(10, null, .{ .Varint = .Simple }),
@@ -25370,7 +25370,7 @@ pub const BNHDPFPOBFP = struct {
     MMPGIMELFOM: i64 = 0,
     IFIANKDAHEB: u32 = 0,
     AAEJFCECOEP: bool = false,
-    JGPGMFODMNN: i64 = 0,
+    end_timestamp: i64 = 0,
 
     pub const _desc_table = .{
         .BDNCPBNHEMN = fd(2, 13838, .{ .Varint = .Simple }),
@@ -25378,7 +25378,7 @@ pub const BNHDPFPOBFP = struct {
         .MMPGIMELFOM = fd(11, 2214, .{ .Varint = .Simple }),
         .IFIANKDAHEB = fd(12, 1547, .{ .Varint = .Simple }),
         .AAEJFCECOEP = fd(14, null, .{ .Varint = .Simple }),
-        .JGPGMFODMNN = fd(15, 5060, .{ .Varint = .Simple }),
+        .end_timestamp = fd(15, 5060, .{ .Varint = .Simple }),
     };
 };
 
@@ -25397,16 +25397,16 @@ pub const CMDGJBENFMN = struct {
     pb: protobuf.ProtobufMixins(@This()) = .{},
     DHICNMNAFON: HFLFGCJDHOF = @enumFromInt(0),
     AIDHOCDBNMD: u32 = 0,
-    HOLKHLMIGAH: i64 = 0,
-    JGPGMFODMNN: i64 = 0,
+    begin_timestamp: i64 = 0,
+    end_timestamp: i64 = 0,
     ILONCMHGILG: u32 = 0,
     msg: ManagedString = .Empty,
 
     pub const _desc_table = .{
         .DHICNMNAFON = fd(1, null, .{ .Varint = .Simple }),
         .AIDHOCDBNMD = fd(2, null, .{ .Varint = .Simple }),
-        .HOLKHLMIGAH = fd(3, null, .{ .Varint = .Simple }),
-        .JGPGMFODMNN = fd(4, null, .{ .Varint = .Simple }),
+        .begin_timestamp = fd(3, null, .{ .Varint = .Simple }),
+        .end_timestamp = fd(4, null, .{ .Varint = .Simple }),
         .ILONCMHGILG = fd(5, null, .{ .Varint = .Simple }),
         .msg = fd(6, null, .String),
     };
@@ -26208,34 +26208,34 @@ pub const AKEGFBOBEJC = struct {
     };
 };
 
-pub const OIDMDLPGGIL = struct {
+pub const LayerRecord = struct {
     pb: protobuf.ProtobufMixins(@This()) = .{},
     total_time: u32 = 0,
     PHKMAGGPENL: u32 = 0,
-    DBIJHJBPJBC: u32 = 0,
-    BJIDAOGOJAN: KMEMBEABFPE = @enumFromInt(0),
-    MBHKFENJLPD: ArrayList(u32) = .empty,
+    layer_index: u32 = 0,
+    status: LayerStatus = @enumFromInt(0),
+    fight_time_list: ArrayList(u32) = .empty,
     HDHPIMKLPCC: bool = false,
     FCNJFHGKOHP: u32 = 0,
     EDOJADLAKFO: ArrayList(u32) = .empty,
     JCCBBOPFPIC: u32 = 0,
     PNHJOFPBGHI: u32 = 0,
-    GJIKFMDHHCD: u32 = 0,
+    layer_item_id: u32 = 0,
     NIIHAFBFKOB: JBOCHDBLHGP = @enumFromInt(0),
     IJIKKGDCAIE: u32 = 0,
 
     pub const _desc_table = .{
         .total_time = fd(1, null, .{ .Varint = .Simple }),
         .PHKMAGGPENL = fd(2, null, .{ .Varint = .Simple }),
-        .DBIJHJBPJBC = fd(3, null, .{ .Varint = .Simple }),
-        .BJIDAOGOJAN = fd(4, null, .{ .Varint = .Simple }),
-        .MBHKFENJLPD = fd(5, null, .{ .PackedList = .{ .Varint = .Simple } }),
+        .layer_index = fd(3, null, .{ .Varint = .Simple }),
+        .status = fd(4, null, .{ .Varint = .Simple }),
+        .fight_time_list = fd(5, null, .{ .PackedList = .{ .Varint = .Simple } }),
         .HDHPIMKLPCC = fd(6, null, .{ .Varint = .Simple }),
         .FCNJFHGKOHP = fd(7, null, .{ .Varint = .Simple }),
         .EDOJADLAKFO = fd(8, null, .{ .PackedList = .{ .Varint = .Simple } }),
         .JCCBBOPFPIC = fd(9, null, .{ .Varint = .Simple }),
         .PNHJOFPBGHI = fd(10, null, .{ .Varint = .Simple }),
-        .GJIKFMDHHCD = fd(11, null, .{ .Varint = .Simple }),
+        .layer_item_id = fd(11, null, .{ .Varint = .Simple }),
         .NIIHAFBFKOB = fd(12, null, .{ .Varint = .Simple }),
         .IJIKKGDCAIE = fd(14, null, .{ .Varint = .Simple }),
     };
@@ -26455,7 +26455,7 @@ pub const ONFAOJIDAKP = struct {
 pub const SceneData = struct {
     pb: protobuf.ProtobufMixins(@This()) = .{},
     BBMNIBMBINF: ?GDJIHLLNJDH = null,
-    BEPKLPEGOAF: ?GHDKBEEGDOC = null,
+    hadal_zone_scene_data: ?HadalZoneSceneData = null,
     fight_scene_data: ?FightSceneData = null,
     DINOALLOGBA: ?MDIJPMGEDGA = null,
     KEKBDBBCKMA: bool = false,
@@ -26463,7 +26463,7 @@ pub const SceneData = struct {
     ANKNAFMMOBK: ?LNHJCHCMJGN = null,
     scene_id: u32 = 0,
     MIDDAPPJEHO: ?PJOBJMEJMBM = null,
-    JOGKJBPDOKP: u32 = 0,
+    enemy_property_scale: u32 = 0,
     NGLJFOCNOKN: u32 = 0,
     LLNKFNEFPEL: ?BCBGPHFHJEE = null,
     PKOHLCMICOK: ?PKJDIHMDDGG = null,
@@ -26474,7 +26474,7 @@ pub const SceneData = struct {
 
     pub const _desc_table = .{
         .BBMNIBMBINF = fd(1, null, .{ .SubMessage = {} }),
-        .BEPKLPEGOAF = fd(2, null, .{ .SubMessage = {} }),
+        .hadal_zone_scene_data = fd(2, null, .{ .SubMessage = {} }),
         .fight_scene_data = fd(3, null, .{ .SubMessage = {} }),
         .DINOALLOGBA = fd(4, null, .{ .SubMessage = {} }),
         .KEKBDBBCKMA = fd(5, null, .{ .Varint = .Simple }),
@@ -26482,7 +26482,7 @@ pub const SceneData = struct {
         .ANKNAFMMOBK = fd(7, null, .{ .SubMessage = {} }),
         .scene_id = fd(8, 16082, .{ .Varint = .Simple }),
         .MIDDAPPJEHO = fd(9, null, .{ .SubMessage = {} }),
-        .JOGKJBPDOKP = fd(10, 11485, .{ .Varint = .Simple }),
+        .enemy_property_scale = fd(10, 11485, .{ .Varint = .Simple }),
         .NGLJFOCNOKN = fd(11, 6065, .{ .Varint = .Simple }),
         .LLNKFNEFPEL = fd(12, null, .{ .SubMessage = {} }),
         .PKOHLCMICOK = fd(13, null, .{ .SubMessage = {} }),
@@ -27180,15 +27180,15 @@ pub const HFCMGEDEOKM = struct {
     };
 };
 
-pub const GHMOKJDJMLH = struct {
+pub const HallRefreshScNotify = struct {
     pub const cmd_id: u16 = 6093;
 
     pb: protobuf.ProtobufMixins(@This()) = .{},
     player_avatar_id: u32 = 0,
     HBPOFKFEFPP: u32 = 0,
-    BAOCDLDEDOD: bool = false,
+    force_refresh: bool = false,
     AFPIFMODDCP: ArrayList(IIGKPKKPJJO) = .empty,
-    IMMGDBFDCMM: ArrayList(GHMOKJDJMLH.IMMGDBFDCMMEntry) = .empty,
+    IMMGDBFDCMM: ArrayList(HallRefreshScNotify.IMMGDBFDCMMEntry) = .empty,
     control_guise_avatar_id: u32 = 0,
     section_id: u32 = 0,
     HKMLIJJCAMC: u32 = 0,
@@ -27214,7 +27214,7 @@ pub const GHMOKJDJMLH = struct {
     FFLNLFBIMAF: u32 = 0,
     DDELDCPMLMO: u32 = 0,
     POGCBMJKFPH: u32 = 0,
-    JBHIFJDKBGO: ArrayList(GHMOKJDJMLH.JBHIFJDKBGOEntry) = .empty,
+    JBHIFJDKBGO: ArrayList(HallRefreshScNotify.JBHIFJDKBGOEntry) = .empty,
     JOJKLMCHEGI: bool = false,
     FNOIMEMJAKG: ArrayList(i32) = .empty,
     LBGAMKJOLPC: ArrayList(i32) = .empty,
@@ -27227,7 +27227,7 @@ pub const GHMOKJDJMLH = struct {
     pub const _desc_table = .{
         .player_avatar_id = fd(1, 4578, .{ .Varint = .Simple }),
         .HBPOFKFEFPP = fd(2, 12979, .{ .Varint = .Simple }),
-        .BAOCDLDEDOD = fd(4, null, .{ .Varint = .Simple }),
+        .force_refresh = fd(4, null, .{ .Varint = .Simple }),
         .AFPIFMODDCP = fd(5, null, .{ .List = .{ .SubMessage = {} } }),
         .IMMGDBFDCMM = fd(6, null, .{ .List = .{ .SubMessage = {} } }),
         .control_guise_avatar_id = fd(7, 13030, .{ .Varint = .Simple }),
@@ -27628,13 +27628,13 @@ pub const BNFCLIHEBEH = struct {
 
 pub const JCCKMHKKKHJ = struct {
     pb: protobuf.ProtobufMixins(@This()) = .{},
-    HOLKHLMIGAH: i64 = 0,
-    JGPGMFODMNN: i64 = 0,
+    begin_timestamp: i64 = 0,
+    end_timestamp: i64 = 0,
     IFIANKDAHEB: u32 = 0,
 
     pub const _desc_table = .{
-        .HOLKHLMIGAH = fd(3, 2540, .{ .Varint = .Simple }),
-        .JGPGMFODMNN = fd(6, 9797, .{ .Varint = .Simple }),
+        .begin_timestamp = fd(3, 2540, .{ .Varint = .Simple }),
+        .end_timestamp = fd(6, 9797, .{ .Varint = .Simple }),
         .IFIANKDAHEB = fd(13, 6505, .{ .Varint = .Simple }),
     };
 };
@@ -28792,11 +28792,11 @@ pub const FOAJBLGFJLN = struct {
 
     pb: protobuf.ProtobufMixins(@This()) = .{},
     retcode: i32 = 0,
-    JGPGMFODMNN: i64 = 0,
+    end_timestamp: i64 = 0,
 
     pub const _desc_table = .{
         .retcode = fd(10, 4870, .{ .Varint = .Simple }),
-        .JGPGMFODMNN = fd(12, 1333, .{ .Varint = .Simple }),
+        .end_timestamp = fd(12, 1333, .{ .Varint = .Simple }),
     };
 };
 
@@ -29879,7 +29879,7 @@ pub const EANEKBIGOHA = struct {
     LEECJAHPFEB: ICBMFNIJICB = @enumFromInt(0),
     IAOLANLJJMI: u32 = 0,
     ABDEOBLGAIA: DKGPOLPPAJH = @enumFromInt(0),
-    OGHMNEEDILK: ?DPMHOMKBFGM = null,
+    OGHMNEEDILK: ?AvatarUnitInfo = null,
 
     pub const _desc_table = .{
         .avatar_id = fd(1, null, .{ .Varint = .Simple }),
@@ -31366,7 +31366,7 @@ pub const KIMNKMBHDAI = struct {
     ADKFCFJEEAH: i64 = 0,
     CBDJNGKNDIL: bool = false,
     KDPCOLCGHCD: u32 = 0,
-    JGPGMFODMNN: i64 = 0,
+    end_timestamp: i64 = 0,
     CNAGECFAKNE: u32 = 0,
     JKPJDFPPDJE: i32 = 0,
     is_unlocked: bool = false,
@@ -31376,7 +31376,7 @@ pub const KIMNKMBHDAI = struct {
         .ADKFCFJEEAH = fd(1, 5946, .{ .Varint = .Simple }),
         .CBDJNGKNDIL = fd(6, null, .{ .Varint = .Simple }),
         .KDPCOLCGHCD = fd(7, 1685, .{ .Varint = .Simple }),
-        .JGPGMFODMNN = fd(8, 2242, .{ .Varint = .Simple }),
+        .end_timestamp = fd(8, 2242, .{ .Varint = .Simple }),
         .CNAGECFAKNE = fd(12, 3547, .{ .Varint = .Simple }),
         .JKPJDFPPDJE = fd(13, 10695, .{ .Varint = .Simple }),
         .is_unlocked = fd(14, null, .{ .Varint = .Simple }),
@@ -32190,10 +32190,10 @@ pub const FLBCFOPBHHA = struct {
 
 pub const OKMJOCEJCKB = struct {
     pb: protobuf.ProtobufMixins(@This()) = .{},
-    CILKAJCAJCJ: i32 = 0,
+    zone_id: i32 = 0,
 
     pub const _desc_table = .{
-        .CILKAJCAJCJ = fd(12, 8327, .{ .Varint = .Simple }),
+        .zone_id = fd(12, 8327, .{ .Varint = .Simple }),
     };
 };
 
@@ -32882,7 +32882,7 @@ pub const KECOFPCHHJD = struct {
 pub const ICEEBIBPOPO = struct {
     pb: protobuf.ProtobufMixins(@This()) = .{},
     is_unlocked: bool = false,
-    JGPGMFODMNN: i64 = 0,
+    end_timestamp: i64 = 0,
     CKPIKOBGHIN: ArrayList(ICEEBIBPOPO.CKPIKOBGHINEntry) = .empty,
     BJCCKENFCDO: i64 = 0,
     LGGFEOKGGAP: bool = false,
@@ -32890,7 +32890,7 @@ pub const ICEEBIBPOPO = struct {
 
     pub const _desc_table = .{
         .is_unlocked = fd(2, null, .{ .Varint = .Simple }),
-        .JGPGMFODMNN = fd(8, 9885, .{ .Varint = .Simple }),
+        .end_timestamp = fd(8, 9885, .{ .Varint = .Simple }),
         .CKPIKOBGHIN = fd(9, null, .{ .List = .{ .SubMessage = {} } }),
         .BJCCKENFCDO = fd(10, 12889, .{ .Varint = .Simple }),
         .LGGFEOKGGAP = fd(13, null, .{ .Varint = .Simple }),
@@ -33297,24 +33297,24 @@ pub const HKIGDHKGKPC = struct {
     };
 };
 
-pub const IONHGBCJIKI = struct {
+pub const HadalEntranceInfo = struct {
     pb: protobuf.ProtobufMixins(@This()) = .{},
-    AADMGKAFBHF: BKAFIEGJJCH = @enumFromInt(0),
-    BHMFPGNPBKF: u32 = 0,
-    state: HAJEGKBMGBF = @enumFromInt(0),
-    BLOFNPEPJNC: ?IOCDIBNLAFE = null,
-    NEFNOBGKBEB: ?IOCDIBNLAFE = null,
+    entrance_type: EntranceType = @enumFromInt(0),
+    entrance_id: u32 = 0,
+    state: EntranceState = @enumFromInt(0),
+    cur_zone_record: ?ZoneRecord = null,
+    prev_zone_record: ?ZoneRecord = null,
     MOHMODPLICJ: AGELAEKFNMI = @enumFromInt(0),
-    EHNBMGHGDFO: ArrayList(IOCDIBNLAFE) = .empty,
+    zone_record_history_list: ArrayList(ZoneRecord) = .empty,
 
     pub const _desc_table = .{
-        .AADMGKAFBHF = fd(1, null, .{ .Varint = .Simple }),
-        .BHMFPGNPBKF = fd(2, null, .{ .Varint = .Simple }),
+        .entrance_type = fd(1, null, .{ .Varint = .Simple }),
+        .entrance_id = fd(2, null, .{ .Varint = .Simple }),
         .state = fd(3, null, .{ .Varint = .Simple }),
-        .BLOFNPEPJNC = fd(4, null, .{ .SubMessage = {} }),
-        .NEFNOBGKBEB = fd(5, null, .{ .SubMessage = {} }),
+        .cur_zone_record = fd(4, null, .{ .SubMessage = {} }),
+        .prev_zone_record = fd(5, null, .{ .SubMessage = {} }),
         .MOHMODPLICJ = fd(6, null, .{ .Varint = .Simple }),
-        .EHNBMGHGDFO = fd(7, null, .{ .List = .{ .SubMessage = {} } }),
+        .zone_record_history_list = fd(7, null, .{ .List = .{ .SubMessage = {} } }),
     };
 };
 
@@ -33826,7 +33826,7 @@ pub const BOAODABAPGA = struct {
     AAKJNHOKAKO: ArrayList(u32) = .empty,
     ELLALMIPCBK: u32 = 0,
     EPCLLNAJOIB: u32 = 0,
-    BJIDAOGOJAN: u32 = 0,
+    status: u32 = 0,
     FABHBIEJAOJ: ArrayList(u32) = .empty,
     ABNNJPEIMIL: u32 = 0,
     DLLFPLLFEJH: ?CIAGMMLPKEI = null,
@@ -33840,7 +33840,7 @@ pub const BOAODABAPGA = struct {
         .AAKJNHOKAKO = fd(7, null, .{ .PackedList = .{ .Varint = .Simple } }),
         .ELLALMIPCBK = fd(8, 2659, .{ .Varint = .Simple }),
         .EPCLLNAJOIB = fd(9, 10316, .{ .Varint = .Simple }),
-        .BJIDAOGOJAN = fd(10, 16228, .{ .Varint = .Simple }),
+        .status = fd(10, 16228, .{ .Varint = .Simple }),
         .FABHBIEJAOJ = fd(11, null, .{ .PackedList = .{ .Varint = .Simple } }),
         .ABNNJPEIMIL = fd(12, 3551, .{ .Varint = .Simple }),
         .DLLFPLLFEJH = fd(13, null, .{ .SubMessage = {} }),
@@ -34143,7 +34143,7 @@ pub const JKFHBMFMCGE = struct {
     CLAADAJGEJK: ArrayList(u32) = .empty,
     KAJPHOBJECH: u32 = 0,
     DMGNEAEBJID: ArrayList(u32) = .empty,
-    GJIKFMDHHCD: u32 = 0,
+    layer_item_id: u32 = 0,
     DHIGAONKNGE: bool = false,
     NKDJBMLBAHI: u32 = 0,
     DPHMCABPJMB: ArrayList(u32) = .empty,
@@ -34154,7 +34154,7 @@ pub const JKFHBMFMCGE = struct {
         .CLAADAJGEJK = fd(2, null, .{ .PackedList = .{ .Varint = .Simple } }),
         .KAJPHOBJECH = fd(4, 4406, .{ .Varint = .Simple }),
         .DMGNEAEBJID = fd(6, null, .{ .PackedList = .{ .Varint = .Simple } }),
-        .GJIKFMDHHCD = fd(7, 8268, .{ .Varint = .Simple }),
+        .layer_item_id = fd(7, 8268, .{ .Varint = .Simple }),
         .DHIGAONKNGE = fd(8, null, .{ .Varint = .Simple }),
         .NKDJBMLBAHI = fd(9, 14511, .{ .Varint = .Simple }),
         .DPHMCABPJMB = fd(10, null, .{ .PackedList = .{ .Varint = .Simple } }),
@@ -35897,10 +35897,10 @@ pub const OHNEOGHFEMJ = struct {
 
 pub const AOFDEDFCEAA = struct {
     pb: protobuf.ProtobufMixins(@This()) = .{},
-    CILKAJCAJCJ: u32 = 0,
+    zone_id: u32 = 0,
 
     pub const _desc_table = .{
-        .CILKAJCAJCJ = fd(15, 9657, .{ .Varint = .Simple }),
+        .zone_id = fd(15, 9657, .{ .Varint = .Simple }),
     };
 };
 
@@ -36048,7 +36048,7 @@ pub const MOHGKIPBEEG = struct {
     id: u32 = 0,
     JJFKIDBKPOK: ArrayList(MOHGKIPBEEG.JJFKIDBKPOKEntry) = .empty,
     skill_type_level: ArrayList(AvatarSkillLevel) = .empty,
-    DJDICFKALLI: ArrayList(MOHGKIPBEEG.DJDICFKALLIEntry) = .empty,
+    properties: ArrayList(MOHGKIPBEEG.PropertiesEntry) = .empty,
     unlocked_talent_num: u32 = 0,
     level: u32 = 0,
     equip_list: ArrayList(EquipInfo) = .empty,
@@ -36066,7 +36066,7 @@ pub const MOHGKIPBEEG = struct {
         .id = fd(7, 2066, .{ .Varint = .Simple }),
         .JJFKIDBKPOK = fd(10, null, .{ .List = .{ .SubMessage = {} } }),
         .skill_type_level = fd(11, null, .{ .List = .{ .SubMessage = {} } }),
-        .DJDICFKALLI = fd(12, null, .{ .List = .{ .SubMessage = {} } }),
+        .properties = fd(12, null, .{ .List = .{ .SubMessage = {} } }),
         .unlocked_talent_num = fd(13, 5611, .{ .Varint = .Simple }),
         .level = fd(14, 6347, .{ .Varint = .Simple }),
         .equip_list = fd(15, null, .{ .List = .{ .SubMessage = {} } }),
@@ -36087,7 +36087,7 @@ pub const MOHGKIPBEEG = struct {
         };
     };
 
-    pub const DJDICFKALLIEntry = struct {
+    pub const PropertiesEntry = struct {
         pb: protobuf.ProtobufMixins(@This()) = .{},
         key: u32 = 0,
         value: i32 = 0,
@@ -36858,13 +36858,13 @@ pub const OBPHDLGLPIC = struct {
     pb: protobuf.ProtobufMixins(@This()) = .{},
     PBHIOBHOOMK: ?NMLKMHACDFG = null,
     BEBFJDDOKLH: f32 = 0,
-    JMMDGOBIBLO: i32 = 0,
+    key: i32 = 0,
     DKHFBMNGEOD: ?KHHNNNBBDLE = null,
 
     pub const _desc_table = .{
         .PBHIOBHOOMK = fd(4, null, .{ .SubMessage = {} }),
         .BEBFJDDOKLH = fd(8, null, .{ .FixedInt = .I32 }),
-        .JMMDGOBIBLO = fd(9, 15827, .{ .Varint = .Simple }),
+        .key = fd(9, 15827, .{ .Varint = .Simple }),
         .DKHFBMNGEOD = fd(10, null, .{ .SubMessage = {} }),
     };
 };
@@ -36949,7 +36949,7 @@ pub const OBKMGNMBIOC = struct {
     NKFFLFPGJJG: i32 = 0,
     ELFIJNJNKIB: u32 = 0,
     JNDIOGHNPJH: ManagedString = .Empty,
-    JGPGMFODMNN: i64 = 0,
+    end_timestamp: i64 = 0,
     JOJJCPIDFGF: ManagedString = .Empty,
     NLKAENNELNF: bool = false,
     FOHPNFNLKID: bool = false,
@@ -37000,7 +37000,7 @@ pub const OBKMGNMBIOC = struct {
         .NKFFLFPGJJG = fd(11, 14894, .{ .Varint = .Simple }),
         .ELFIJNJNKIB = fd(12, 8365, .{ .Varint = .Simple }),
         .JNDIOGHNPJH = fd(13, null, .String),
-        .JGPGMFODMNN = fd(14, 1003, .{ .Varint = .Simple }),
+        .end_timestamp = fd(14, 1003, .{ .Varint = .Simple }),
         .JOJJCPIDFGF = fd(15, null, .String),
         .NLKAENNELNF = fd(45, null, .{ .Varint = .Simple }),
         .FOHPNFNLKID = fd(98, null, .{ .Varint = .Simple }),
@@ -37378,7 +37378,7 @@ pub const GMELLFEOIPC = struct {
     HDPNEPDDEPM: u32 = 0,
     CNAGECFAKNE: u32 = 0,
     CBDJNGKNDIL: bool = false,
-    JGPGMFODMNN: i64 = 0,
+    end_timestamp: i64 = 0,
     AOBCPFMMMPH: u32 = 0,
     is_unlocked: bool = false,
     ODPGDAMHLMN: u32 = 0,
@@ -37393,7 +37393,7 @@ pub const GMELLFEOIPC = struct {
         .HDPNEPDDEPM = fd(3, 5124, .{ .Varint = .Simple }),
         .CNAGECFAKNE = fd(4, 13124, .{ .Varint = .Simple }),
         .CBDJNGKNDIL = fd(5, null, .{ .Varint = .Simple }),
-        .JGPGMFODMNN = fd(6, 14082, .{ .Varint = .Simple }),
+        .end_timestamp = fd(6, 14082, .{ .Varint = .Simple }),
         .AOBCPFMMMPH = fd(7, 3484, .{ .Varint = .Simple }),
         .is_unlocked = fd(8, null, .{ .Varint = .Simple }),
         .ODPGDAMHLMN = fd(9, 7611, .{ .Varint = .Simple }),
@@ -37984,7 +37984,7 @@ pub const DNJPFAFHELP = struct {
     };
 };
 
-pub const GOHCAGCNOBP = struct {
+pub const StartHadalZoneBattleScRsp = struct {
     pub const cmd_id: u16 = 4790;
 
     pb: protobuf.ProtobufMixins(@This()) = .{},
@@ -38311,7 +38311,7 @@ pub const BOMNECAEGOK = struct {
     NIMOBMLKPKH: ArrayList(i32) = .empty,
     FHLJGPCJMGJ: u32 = 0,
     NKGNCCBGGNP: bool = false,
-    BHMFPGNPBKF: u32 = 0,
+    entrance_id: u32 = 0,
     DDHJIOEDOJL: u32 = 0,
     NNMINLAANJA: ArrayList(i32) = .empty,
 
@@ -38320,7 +38320,7 @@ pub const BOMNECAEGOK = struct {
         .NIMOBMLKPKH = fd(4, null, .{ .PackedList = .{ .Varint = .Simple } }),
         .FHLJGPCJMGJ = fd(5, 5089, .{ .Varint = .Simple }),
         .NKGNCCBGGNP = fd(9, null, .{ .Varint = .Simple }),
-        .BHMFPGNPBKF = fd(10, 11206, .{ .Varint = .Simple }),
+        .entrance_id = fd(10, 11206, .{ .Varint = .Simple }),
         .DDHJIOEDOJL = fd(12, 731, .{ .Varint = .Simple }),
         .NNMINLAANJA = fd(13, null, .{ .PackedList = .{ .Varint = .Simple } }),
     };
@@ -38553,7 +38553,7 @@ pub const BIEFIHOEMDL = struct {
     };
 };
 
-pub const FFHDIEAHNCD = struct {
+pub const GetHadalZoneDataCsReq = struct {
     pub const cmd_id: u16 = 4555;
 
     pb: protobuf.ProtobufMixins(@This()) = .{},
@@ -40198,16 +40198,16 @@ pub const EGGALNDLCOC = struct {
 pub const GLBJAIOGDPM = struct {
     pb: protobuf.ProtobufMixins(@This()) = .{},
     LMFNPGFBNJP: u32 = 0,
-    DJDICFKALLI: ArrayList(GLBJAIOGDPM.DJDICFKALLIEntry) = .empty,
+    properties: ArrayList(GLBJAIOGDPM.PropertiesEntry) = .empty,
     CHENBMLDBCL: ArrayList(GLBJAIOGDPM.CHENBMLDBCLEntry) = .empty,
 
     pub const _desc_table = .{
         .LMFNPGFBNJP = fd(1, null, .{ .Varint = .Simple }),
-        .DJDICFKALLI = fd(2, null, .{ .List = .{ .SubMessage = {} } }),
+        .properties = fd(2, null, .{ .List = .{ .SubMessage = {} } }),
         .CHENBMLDBCL = fd(3, null, .{ .List = .{ .SubMessage = {} } }),
     };
 
-    pub const DJDICFKALLIEntry = struct {
+    pub const PropertiesEntry = struct {
         pb: protobuf.ProtobufMixins(@This()) = .{},
         key: u32 = 0,
         value: i32 = 0,
@@ -40255,7 +40255,7 @@ pub const AICBBNAKMMP = struct {
     LPDONDENGJE: u32 = 0,
     MANCHPIJDLP: ArrayList(u32) = .empty,
     NDFLFAIKMBJ: u32 = 0,
-    HOLKHLMIGAH: u64 = 0,
+    begin_timestamp: u64 = 0,
     NGFKHHPDONH: u32 = 0,
 
     pub const _desc_table = .{
@@ -40265,7 +40265,7 @@ pub const AICBBNAKMMP = struct {
         .LPDONDENGJE = fd(7, 8839, .{ .Varint = .Simple }),
         .MANCHPIJDLP = fd(8, null, .{ .PackedList = .{ .Varint = .Simple } }),
         .NDFLFAIKMBJ = fd(10, 10269, .{ .Varint = .Simple }),
-        .HOLKHLMIGAH = fd(13, 7649, .{ .Varint = .Simple }),
+        .begin_timestamp = fd(13, 7649, .{ .Varint = .Simple }),
         .NGFKHHPDONH = fd(15, 10348, .{ .Varint = .Simple }),
     };
 };
@@ -40397,12 +40397,12 @@ pub const CCNMGILNMEN = struct {
     pb: protobuf.ProtobufMixins(@This()) = .{},
     BEBFJDDOKLH: u32 = 0,
     OJNMMLDJLOG: u32 = 0,
-    JMMDGOBIBLO: u32 = 0,
+    key: u32 = 0,
 
     pub const _desc_table = .{
         .BEBFJDDOKLH = fd(8, 13539, .{ .Varint = .Simple }),
         .OJNMMLDJLOG = fd(9, 11069, .{ .Varint = .Simple }),
-        .JMMDGOBIBLO = fd(11, 3114, .{ .Varint = .Simple }),
+        .key = fd(11, 3114, .{ .Varint = .Simple }),
     };
 };
 
@@ -40653,7 +40653,7 @@ pub const HKMEHFFHGHF = struct {
     pub const OBKKFEFIFNBEntry = struct {
         pb: protobuf.ProtobufMixins(@This()) = .{},
         key: u32 = 0,
-        value: ?DPMHOMKBFGM = null,
+        value: ?AvatarUnitInfo = null,
 
         pub const _desc_table = .{
             .key = fd(1, null, .{ .Varint = .Simple }),
@@ -42965,14 +42965,14 @@ pub const CKKGFMHGDOF = struct {
     pub const cmd_id: u16 = 5558;
 
     pb: protobuf.ProtobufMixins(@This()) = .{},
-    CILKAJCAJCJ: u32 = 0,
+    zone_id: u32 = 0,
     IJIKKGDCAIE: u32 = 0,
-    DBIJHJBPJBC: u32 = 0,
+    layer_index: u32 = 0,
 
     pub const _desc_table = .{
-        .CILKAJCAJCJ = fd(2, 5383, .{ .Varint = .Simple }),
+        .zone_id = fd(2, 5383, .{ .Varint = .Simple }),
         .IJIKKGDCAIE = fd(8, 7843, .{ .Varint = .Simple }),
-        .DBIJHJBPJBC = fd(10, 2208, .{ .Varint = .Simple }),
+        .layer_index = fd(10, 2208, .{ .Varint = .Simple }),
     };
 };
 
@@ -43005,7 +43005,7 @@ pub const ALIFGNFCPKJ = struct {
     BCPMGJGDBFG: ArrayList(ALIFGNFCPKJ.BCPMGJGDBFGEntry) = .empty,
     LEECJAHPFEB: ANBGGFHEAGF = @enumFromInt(0),
     ICGAFHLALAC: ArrayList(u32) = .empty,
-    JGPGMFODMNN: i64 = 0,
+    end_timestamp: i64 = 0,
 
     pub const _desc_table = .{
         .MCHAMKPBBDH = fd(1, null, .{ .List = .{ .SubMessage = {} } }),
@@ -43017,7 +43017,7 @@ pub const ALIFGNFCPKJ = struct {
         .BCPMGJGDBFG = fd(10, null, .{ .List = .{ .SubMessage = {} } }),
         .LEECJAHPFEB = fd(11, null, .{ .Varint = .Simple }),
         .ICGAFHLALAC = fd(13, null, .{ .PackedList = .{ .Varint = .Simple } }),
-        .JGPGMFODMNN = fd(14, 2416, .{ .Varint = .Simple }),
+        .end_timestamp = fd(14, 2416, .{ .Varint = .Simple }),
     };
 
     pub const BCPMGJGDBFGEntry = struct {
@@ -43492,8 +43492,8 @@ pub const EquipInfo = struct {
     star: u32 = 0,
     uid: u32 = 0,
     BDIIHAAKNNN: bool = false,
-    PKKFICMDHCE: ArrayList(PFEDPPBJABG) = .empty,
-    MJDMCFIFOCG: ArrayList(PFEDPPBJABG) = .empty,
+    sub_propertys: ArrayList(EquipProperty) = .empty,
+    propertys: ArrayList(EquipProperty) = .empty,
 
     pub const _desc_table = .{
         .exp = fd(2, 15562, .{ .Varint = .Simple }),
@@ -43504,8 +43504,8 @@ pub const EquipInfo = struct {
         .star = fd(9, 9131, .{ .Varint = .Simple }),
         .uid = fd(11, 11617, .{ .Varint = .Simple }),
         .BDIIHAAKNNN = fd(12, null, .{ .Varint = .Simple }),
-        .PKKFICMDHCE = fd(13, null, .{ .List = .{ .SubMessage = {} } }),
-        .MJDMCFIFOCG = fd(14, null, .{ .List = .{ .SubMessage = {} } }),
+        .sub_propertys = fd(13, null, .{ .List = .{ .SubMessage = {} } }),
+        .propertys = fd(14, null, .{ .List = .{ .SubMessage = {} } }),
     };
 };
 
@@ -43639,14 +43639,14 @@ pub const DJFGBPJGCFP = struct {
     HJCEFPGOGIG: ?IIOFIJMJGEE = null,
     HEHFEIFPGEL: ?LNEMDIIOCAH = null,
     id: u32 = 0,
-    JGPGMFODMNN: i64 = 0,
+    end_timestamp: i64 = 0,
     total_time: u32 = 0,
 
     pub const _desc_table = .{
         .HJCEFPGOGIG = fd(2, null, .{ .SubMessage = {} }),
         .HEHFEIFPGEL = fd(5, null, .{ .SubMessage = {} }),
         .id = fd(8, 8191, .{ .Varint = .Simple }),
-        .JGPGMFODMNN = fd(14, 2609, .{ .Varint = .Simple }),
+        .end_timestamp = fd(14, 2609, .{ .Varint = .Simple }),
         .total_time = fd(15, 11215, .{ .Varint = .Simple }),
     };
 };
@@ -47505,12 +47505,12 @@ pub const EIMICLCJHJA = struct {
 
 pub const EJPBGMLIHIG = struct {
     pb: protobuf.ProtobufMixins(@This()) = .{},
-    JMMDGOBIBLO: u32 = 0,
+    key: u32 = 0,
     BGKLCDNDINF: u32 = 0,
     NMAOOABJJEC: u32 = 0,
 
     pub const _desc_table = .{
-        .JMMDGOBIBLO = fd(2, 13066, .{ .Varint = .Simple }),
+        .key = fd(2, 13066, .{ .Varint = .Simple }),
         .BGKLCDNDINF = fd(4, 8620, .{ .Varint = .Simple }),
         .NMAOOABJJEC = fd(10, 10259, .{ .Varint = .Simple }),
     };
@@ -49252,7 +49252,7 @@ pub const KJHIOLLGPBH = struct {
     PDEPEGIKEPD: u32 = 0,
     NOMBCLHEPOF: u32 = 0,
     KLLCFKDPCJL: i32 = 0,
-    JGPGMFODMNN: i64 = 0,
+    end_timestamp: i64 = 0,
     OAFNHGIPMMP: ManagedString = .Empty,
     EJBKGGBLCOB: u32 = 0,
     AFGCPHNCMMA: u32 = 0,
@@ -49278,7 +49278,7 @@ pub const KJHIOLLGPBH = struct {
         .PDEPEGIKEPD = fd(167, 12000, .{ .Varint = .Simple }),
         .NOMBCLHEPOF = fd(401, 13409, .{ .Varint = .Simple }),
         .KLLCFKDPCJL = fd(468, 5410, .{ .Varint = .Simple }),
-        .JGPGMFODMNN = fd(565, 3781, .{ .Varint = .Simple }),
+        .end_timestamp = fd(565, 3781, .{ .Varint = .Simple }),
         .OAFNHGIPMMP = fd(724, null, .String),
         .EJBKGGBLCOB = fd(871, 958, .{ .Varint = .Simple }),
         .AFGCPHNCMMA = fd(968, 610, .{ .Varint = .Simple }),
@@ -49300,12 +49300,12 @@ pub const AMAFHKHNGJF = struct {
     };
 };
 
-pub const IOCDIBNLAFE = struct {
+pub const ZoneRecord = struct {
     pb: protobuf.ProtobufMixins(@This()) = .{},
-    CILKAJCAJCJ: u32 = 0,
-    FHBPGLENGBG: ArrayList(OIDMDLPGGIL) = .empty,
-    HOLKHLMIGAH: i64 = 0,
-    JGPGMFODMNN: i64 = 0,
+    zone_id: u32 = 0,
+    layer_record_list: ArrayList(LayerRecord) = .empty,
+    begin_timestamp: i64 = 0,
+    end_timestamp: i64 = 0,
     IOKKGPNIHHA: u32 = 0,
     EJBNMEGOKAP: ArrayList(u32) = .empty,
     MDJIGNIHCFM: u32 = 0,
@@ -49313,10 +49313,10 @@ pub const IOCDIBNLAFE = struct {
     BOIFJLKDDOO: bool = false,
 
     pub const _desc_table = .{
-        .CILKAJCAJCJ = fd(1, null, .{ .Varint = .Simple }),
-        .FHBPGLENGBG = fd(2, null, .{ .List = .{ .SubMessage = {} } }),
-        .HOLKHLMIGAH = fd(3, null, .{ .Varint = .Simple }),
-        .JGPGMFODMNN = fd(4, null, .{ .Varint = .Simple }),
+        .zone_id = fd(1, null, .{ .Varint = .Simple }),
+        .layer_record_list = fd(2, null, .{ .List = .{ .SubMessage = {} } }),
+        .begin_timestamp = fd(3, null, .{ .Varint = .Simple }),
+        .end_timestamp = fd(4, null, .{ .Varint = .Simple }),
         .IOKKGPNIHHA = fd(5, null, .{ .Varint = .Simple }),
         .EJBNMEGOKAP = fd(6, null, .{ .PackedList = .{ .Varint = .Simple } }),
         .MDJIGNIHCFM = fd(7, null, .{ .Varint = .Simple }),
@@ -50338,7 +50338,7 @@ pub const OEHFLPEJHIM = struct {
     pb: protobuf.ProtobufMixins(@This()) = .{},
     FOGBPGBBFML: u64 = 0,
     NJMAIPNKJED: ?FNDLFJEMNFN = null,
-    DAONAENIDMK: ArrayList(DPMHOMKBFGM) = .empty,
+    DAONAENIDMK: ArrayList(AvatarUnitInfo) = .empty,
     CMKICJJGLHC: ArrayList(OEHFLPEJHIM.CMKICJJGLHCEntry) = .empty,
     retcode: i32 = 0,
     JJMNMCIGIND: ?DBBBLMNIMNO = null,
@@ -51128,7 +51128,7 @@ pub const HPDNENLNLDA = struct {
     pb: protobuf.ProtobufMixins(@This()) = .{},
     FHHCIDJDGJG: PCFCEDLAAIA = @enumFromInt(0),
     EHMBFMLBAJA: ArrayList(GLBJAIOGDPM) = .empty,
-    DAONAENIDMK: ArrayList(DPMHOMKBFGM) = .empty,
+    DAONAENIDMK: ArrayList(AvatarUnitInfo) = .empty,
 
     pub const _desc_table = .{
         .FHHCIDJDGJG = fd(3, null, .{ .Varint = .Simple }),
@@ -52737,7 +52737,7 @@ pub const LLPEINDAKGD = struct {
     ELLNAIOOGBA: u32 = 0,
     BMPNKMEKEEM: bool = false,
     MMPGIMELFOM: u64 = 0,
-    JGPGMFODMNN: u64 = 0,
+    end_timestamp: u64 = 0,
     HBDFGPFOIKJ: bool = false,
     BLHBEHBCJJE: u32 = 0,
     AEJFGMKFDHI: bool = false,
@@ -52749,7 +52749,7 @@ pub const LLPEINDAKGD = struct {
         .ELLNAIOOGBA = fd(6, 1075, .{ .Varint = .Simple }),
         .BMPNKMEKEEM = fd(7, null, .{ .Varint = .Simple }),
         .MMPGIMELFOM = fd(8, 4092, .{ .Varint = .Simple }),
-        .JGPGMFODMNN = fd(11, 11463, .{ .Varint = .Simple }),
+        .end_timestamp = fd(11, 11463, .{ .Varint = .Simple }),
         .HBDFGPFOIKJ = fd(12, null, .{ .Varint = .Simple }),
         .BLHBEHBCJJE = fd(13, 12767, .{ .Varint = .Simple }),
         .AEJFGMKFDHI = fd(14, null, .{ .Varint = .Simple }),
@@ -52761,10 +52761,10 @@ pub const OGCEEGOLAMH = struct {
     pub const cmd_id: u16 = 8293;
 
     pb: protobuf.ProtobufMixins(@This()) = .{},
-    BHMFPGNPBKF: u32 = 0,
+    entrance_id: u32 = 0,
 
     pub const _desc_table = .{
-        .BHMFPGNPBKF = fd(8, 10371, .{ .Varint = .Simple }),
+        .entrance_id = fd(8, 10371, .{ .Varint = .Simple }),
     };
 };
 
@@ -53326,36 +53326,36 @@ pub const KGFLCMKGHCO = struct {
     };
 };
 
-pub const GHDKBEEGDOC = struct {
+pub const HadalZoneSceneData = struct {
     pb: protobuf.ProtobufMixins(@This()) = .{},
-    NINGBPNBJBL: u32 = 0,
+    second_room_buddy_id: u32 = 0,
     scene_perform: ?ScenePerformInfo = null,
     IJIKKGDCAIE: u32 = 0,
-    AECDPBNDAGO: u32 = 0,
+    first_room_buddy_id: u32 = 0,
     CCJCCANJNBJ: ArrayList(u32) = .empty,
-    CILKAJCAJCJ: u32 = 0,
+    zone_id: u32 = 0,
     BGBJBBNNAMP: f32 = 0,
-    GJIKFMDHHCD: u32 = 0,
-    NAAENBLCODA: ArrayList(u32) = .empty,
-    DBIJHJBPJBC: u32 = 0,
+    layer_item_id: u32 = 0,
+    first_room_avatar_id_list: ArrayList(u32) = .empty,
+    layer_index: u32 = 0,
     GPLNMFENJBG: u32 = 0,
     FAGDPDCACLO: u32 = 0,
-    JADKDKDEECM: ArrayList(u32) = .empty,
+    second_room_avatar_id_list: ArrayList(u32) = .empty,
 
     pub const _desc_table = .{
-        .NINGBPNBJBL = fd(1, 4701, .{ .Varint = .Simple }),
+        .second_room_buddy_id = fd(1, 4701, .{ .Varint = .Simple }),
         .scene_perform = fd(4, null, .{ .SubMessage = {} }),
         .IJIKKGDCAIE = fd(5, 552, .{ .Varint = .Simple }),
-        .AECDPBNDAGO = fd(6, 8902, .{ .Varint = .Simple }),
+        .first_room_buddy_id = fd(6, 8902, .{ .Varint = .Simple }),
         .CCJCCANJNBJ = fd(7, null, .{ .PackedList = .{ .Varint = .Simple } }),
-        .CILKAJCAJCJ = fd(8, 8897, .{ .Varint = .Simple }),
+        .zone_id = fd(8, 8897, .{ .Varint = .Simple }),
         .BGBJBBNNAMP = fd(9, null, .{ .FixedInt = .I32 }),
-        .GJIKFMDHHCD = fd(10, 2131, .{ .Varint = .Simple }),
-        .NAAENBLCODA = fd(11, null, .{ .PackedList = .{ .Varint = .Simple } }),
-        .DBIJHJBPJBC = fd(12, 5908, .{ .Varint = .Simple }),
+        .layer_item_id = fd(10, 2131, .{ .Varint = .Simple }),
+        .first_room_avatar_id_list = fd(11, null, .{ .PackedList = .{ .Varint = .Simple } }),
+        .layer_index = fd(12, 5908, .{ .Varint = .Simple }),
         .GPLNMFENJBG = fd(13, 1317, .{ .Varint = .Simple }),
         .FAGDPDCACLO = fd(14, 2533, .{ .Varint = .Simple }),
-        .JADKDKDEECM = fd(15, null, .{ .PackedList = .{ .Varint = .Simple } }),
+        .second_room_avatar_id_list = fd(15, null, .{ .PackedList = .{ .Varint = .Simple } }),
     };
 };
 
@@ -53495,15 +53495,15 @@ pub const OBNJIIPOIHN = struct {
     pub const _desc_table = .{};
 };
 
-pub const JELJMNPCNGP = struct {
+pub const GetHadalZoneDataScRsp = struct {
     pub const cmd_id: u16 = 1327;
 
     pb: protobuf.ProtobufMixins(@This()) = .{},
-    BJBPAMCJBDE: ArrayList(IONHGBCJIKI) = .empty,
+    hadal_entrance_list: ArrayList(HadalEntranceInfo) = .empty,
     retcode: i32 = 0,
 
     pub const _desc_table = .{
-        .BJBPAMCJBDE = fd(11, null, .{ .List = .{ .SubMessage = {} } }),
+        .hadal_entrance_list = fd(11, null, .{ .List = .{ .SubMessage = {} } }),
         .retcode = fd(15, 11726, .{ .Varint = .Simple }),
     };
 };
@@ -56035,7 +56035,7 @@ pub const ABDHHGAFILK = struct {
     LGGFEOKGGAP: bool = false,
     BJCCKENFCDO: i64 = 0,
     is_unlocked: bool = false,
-    JGPGMFODMNN: i64 = 0,
+    end_timestamp: i64 = 0,
     DFMBDADADNJ: u32 = 0,
     CKGCHJEBKCI: ArrayList(JOMLGIMONBG) = .empty,
 
@@ -56043,7 +56043,7 @@ pub const ABDHHGAFILK = struct {
         .LGGFEOKGGAP = fd(2, null, .{ .Varint = .Simple }),
         .BJCCKENFCDO = fd(7, 7454, .{ .Varint = .Simple }),
         .is_unlocked = fd(9, null, .{ .Varint = .Simple }),
-        .JGPGMFODMNN = fd(10, 6894, .{ .Varint = .Simple }),
+        .end_timestamp = fd(10, 6894, .{ .Varint = .Simple }),
         .DFMBDADADNJ = fd(11, 6336, .{ .Varint = .Simple }),
         .CKGCHJEBKCI = fd(12, null, .{ .List = .{ .SubMessage = {} } }),
     };
@@ -56088,7 +56088,7 @@ pub const JMEILKMIDOO = struct {
     GFDFKKKAMJO: bool = false,
     CLIKKCAAKAA: bool = false,
     OGIHPPBCMBP: u32 = 0,
-    HOLKHLMIGAH: i64 = 0,
+    begin_timestamp: i64 = 0,
     OHHJOMGFJKD: bool = false,
     IDAMNLLCCHE: bool = false,
     AJMAJNCDEEN: bool = false,
@@ -56103,7 +56103,7 @@ pub const JMEILKMIDOO = struct {
         .GFDFKKKAMJO = fd(1, null, .{ .Varint = .Simple }),
         .CLIKKCAAKAA = fd(2, null, .{ .Varint = .Simple }),
         .OGIHPPBCMBP = fd(3, 9139, .{ .Varint = .Simple }),
-        .HOLKHLMIGAH = fd(5, 10653, .{ .Varint = .Simple }),
+        .begin_timestamp = fd(5, 10653, .{ .Varint = .Simple }),
         .OHHJOMGFJKD = fd(6, null, .{ .Varint = .Simple }),
         .IDAMNLLCCHE = fd(7, null, .{ .Varint = .Simple }),
         .AJMAJNCDEEN = fd(8, null, .{ .Varint = .Simple }),
@@ -56877,8 +56877,8 @@ pub const OHNHOKEFONA = struct {
     pb: protobuf.ProtobufMixins(@This()) = .{},
     MFLKLKEEBFI: ArrayList(u32) = .empty,
     CIDHPEIKNDM: u32 = 0,
-    GJIKFMDHHCD: u32 = 0,
-    DBIJHJBPJBC: u32 = 0,
+    layer_item_id: u32 = 0,
+    layer_index: u32 = 0,
     avatar_id_list: ArrayList(u32) = .empty,
     MBPAKEODIKH: u32 = 0,
     CKKOBAHAIAN: BOJOPHBBDNE = @enumFromInt(0),
@@ -56887,8 +56887,8 @@ pub const OHNHOKEFONA = struct {
     pub const _desc_table = .{
         .MFLKLKEEBFI = fd(1, null, .{ .PackedList = .{ .Varint = .Simple } }),
         .CIDHPEIKNDM = fd(2, 13640, .{ .Varint = .Simple }),
-        .GJIKFMDHHCD = fd(3, 6132, .{ .Varint = .Simple }),
-        .DBIJHJBPJBC = fd(5, 15472, .{ .Varint = .Simple }),
+        .layer_item_id = fd(3, 6132, .{ .Varint = .Simple }),
+        .layer_index = fd(5, 15472, .{ .Varint = .Simple }),
         .avatar_id_list = fd(7, null, .{ .PackedList = .{ .Varint = .Simple } }),
         .MBPAKEODIKH = fd(9, 679, .{ .Varint = .Simple }),
         .CKKOBAHAIAN = fd(12, null, .{ .Varint = .Simple }),
@@ -57393,7 +57393,7 @@ pub const DungeonInfo = struct {
     IEFCMOIBIBA: ?JNIEPODPCIA = null,
     IBIMIBGPDPK: u32 = 0,
     NNIBIGKCIEN: ArrayList(DungeonInfo.NNIBIGKCIENEntry) = .empty,
-    avatar_list: ArrayList(DPMHOMKBFGM) = .empty,
+    avatar_list: ArrayList(AvatarUnitInfo) = .empty,
     MMPGIMELFOM: i64 = 0,
     DEPFJKCCCLL: ArrayList(u32) = .empty,
     quest_id: u32 = 0,
@@ -57536,7 +57536,7 @@ pub const BFBGBBCHGDH = struct {
     ABHHKDHKNMB: ArrayList(GLLAFFDLNLD) = .empty,
     COBIKGCDEMG: u32 = 0,
     OBODHCPCDLC: ?GLLAFFDLNLD = null,
-    JGPGMFODMNN: i64 = 0,
+    end_timestamp: i64 = 0,
     GICCINCLMNL: bool = false,
 
     pub const _desc_table = .{
@@ -57548,7 +57548,7 @@ pub const BFBGBBCHGDH = struct {
         .ABHHKDHKNMB = fd(9, null, .{ .List = .{ .SubMessage = {} } }),
         .COBIKGCDEMG = fd(10, 4263, .{ .Varint = .Simple }),
         .OBODHCPCDLC = fd(12, null, .{ .SubMessage = {} }),
-        .JGPGMFODMNN = fd(14, 11032, .{ .Varint = .Simple }),
+        .end_timestamp = fd(14, 11032, .{ .Varint = .Simple }),
         .GICCINCLMNL = fd(15, null, .{ .Varint = .Simple }),
     };
 
@@ -59906,7 +59906,7 @@ pub const BLJCLEEEANF = struct {
 
     pb: protobuf.ProtobufMixins(@This()) = .{},
     retcode: i32 = 0,
-    DAONAENIDMK: ArrayList(DPMHOMKBFGM) = .empty,
+    DAONAENIDMK: ArrayList(AvatarUnitInfo) = .empty,
 
     pub const _desc_table = .{
         .retcode = fd(5, 11607, .{ .Varint = .Simple }),
@@ -60067,13 +60067,13 @@ pub const OOKMMJDICLB = struct {
 pub const CPMMCDIOHEO = struct {
     pb: protobuf.ProtobufMixins(@This()) = .{},
     ENDLPMJHBFC: i64 = 0,
-    JGPGMFODMNN: i64 = 0,
+    end_timestamp: i64 = 0,
     COMPLAAJNFK: u32 = 0,
     MMPGIMELFOM: i64 = 0,
 
     pub const _desc_table = .{
         .ENDLPMJHBFC = fd(3, 14688, .{ .Varint = .Simple }),
-        .JGPGMFODMNN = fd(9, 104, .{ .Varint = .Simple }),
+        .end_timestamp = fd(9, 104, .{ .Varint = .Simple }),
         .COMPLAAJNFK = fd(10, 11981, .{ .Varint = .Simple }),
         .MMPGIMELFOM = fd(13, 11111, .{ .Varint = .Simple }),
     };
@@ -60137,7 +60137,7 @@ pub const EDLKABIEMHP = struct {
     pub const cmd_id: u16 = 4365;
 
     pb: protobuf.ProtobufMixins(@This()) = .{},
-    DAONAENIDMK: ArrayList(DPMHOMKBFGM) = .empty,
+    DAONAENIDMK: ArrayList(AvatarUnitInfo) = .empty,
     FOGBPGBBFML: u64 = 0,
     retcode: i32 = 0,
 
@@ -61821,7 +61821,7 @@ pub const JJOGHLLPCDA = struct {
     NPCFNMAKBFC: u32 = 0,
     IEGBBHKKKDI: u32 = 0,
     NBCIAIMOCMP: ?CIAGMMLPKEI = null,
-    JGPGMFODMNN: i64 = 0,
+    end_timestamp: i64 = 0,
     NCAIHKCEOOE: ArrayList(LALDADBMOPI) = .empty,
     quest_id: u32 = 0,
     IKFKDDFJCIF: bool = false,
@@ -61831,7 +61831,7 @@ pub const JJOGHLLPCDA = struct {
         .NPCFNMAKBFC = fd(6, 10388, .{ .Varint = .Simple }),
         .IEGBBHKKKDI = fd(7, 4533, .{ .Varint = .Simple }),
         .NBCIAIMOCMP = fd(8, null, .{ .SubMessage = {} }),
-        .JGPGMFODMNN = fd(9, 8062, .{ .Varint = .Simple }),
+        .end_timestamp = fd(9, 8062, .{ .Varint = .Simple }),
         .NCAIHKCEOOE = fd(11, null, .{ .List = .{ .SubMessage = {} } }),
         .quest_id = fd(12, 11123, .{ .Varint = .Simple }),
         .IKFKDDFJCIF = fd(15, null, .{ .Varint = .Simple }),
@@ -62035,7 +62035,7 @@ pub const NAEIPJDBGDH = struct {
     skill_type_level: ArrayList(KFLMEPHAONI) = .empty,
     KEGFLMGJDMD: u32 = 0,
     EPCLLNAJOIB: u32 = 0,
-    BJIDAOGOJAN: u32 = 0,
+    status: u32 = 0,
     CPMBGNMCMAE: ManagedString = .Empty,
 
     pub const _desc_table = .{
@@ -62046,7 +62046,7 @@ pub const NAEIPJDBGDH = struct {
         .skill_type_level = fd(5, null, .{ .List = .{ .SubMessage = {} } }),
         .KEGFLMGJDMD = fd(7, 7133, .{ .Varint = .Simple }),
         .EPCLLNAJOIB = fd(8, 2497, .{ .Varint = .Simple }),
-        .BJIDAOGOJAN = fd(10, 12632, .{ .Varint = .Simple }),
+        .status = fd(10, 12632, .{ .Varint = .Simple }),
         .CPMBGNMCMAE = fd(12, null, .String),
     };
 };
@@ -63837,11 +63837,11 @@ pub const PAACCHDGOOF = struct {
 pub const JAMCCBPGLKM = struct {
     pb: protobuf.ProtobufMixins(@This()) = .{},
     LMENGNFKGGL: u32 = 0,
-    DBIJHJBPJBC: u32 = 0,
+    layer_index: u32 = 0,
 
     pub const _desc_table = .{
         .LMENGNFKGGL = fd(3, 4809, .{ .Varint = .Simple }),
-        .DBIJHJBPJBC = fd(11, 1480, .{ .Varint = .Simple }),
+        .layer_index = fd(11, 1480, .{ .Varint = .Simple }),
     };
 };
 
@@ -64602,10 +64602,10 @@ pub const ADGNMJKFBDD = struct {
     pub const cmd_id: u16 = 6120;
 
     pb: protobuf.ProtobufMixins(@This()) = .{},
-    CILKAJCAJCJ: u32 = 0,
+    zone_id: u32 = 0,
 
     pub const _desc_table = .{
-        .CILKAJCAJCJ = fd(10, 11441, .{ .Varint = .Simple }),
+        .zone_id = fd(10, 11441, .{ .Varint = .Simple }),
     };
 };
 
@@ -65795,12 +65795,12 @@ pub const JNEEECCJOBC = struct {
 
     pb: protobuf.ProtobufMixins(@This()) = .{},
     OBCHMCIPFNI: ArrayList(u32) = .empty,
-    BHMFPGNPBKF: u32 = 0,
+    entrance_id: u32 = 0,
     MKJANDGHJOI: bool = false,
 
     pub const _desc_table = .{
         .OBCHMCIPFNI = fd(2, null, .{ .PackedList = .{ .Varint = .Simple } }),
-        .BHMFPGNPBKF = fd(3, 12563, .{ .Varint = .Simple }),
+        .entrance_id = fd(3, 12563, .{ .Varint = .Simple }),
         .MKJANDGHJOI = fd(7, null, .{ .Varint = .Simple }),
     };
 };
@@ -66326,13 +66326,13 @@ pub const MiscData = struct {
 pub const CFBGHCBKIAA = struct {
     pb: protobuf.ProtobufMixins(@This()) = .{},
     FBEEAAEBBNM: u32 = 0,
-    HOLKHLMIGAH: u64 = 0,
-    JGPGMFODMNN: u64 = 0,
+    begin_timestamp: u64 = 0,
+    end_timestamp: u64 = 0,
 
     pub const _desc_table = .{
         .FBEEAAEBBNM = fd(1, null, .{ .Varint = .Simple }),
-        .HOLKHLMIGAH = fd(2, null, .{ .Varint = .Simple }),
-        .JGPGMFODMNN = fd(3, null, .{ .Varint = .Simple }),
+        .begin_timestamp = fd(2, null, .{ .Varint = .Simple }),
+        .end_timestamp = fd(3, null, .{ .Varint = .Simple }),
     };
 };
 
@@ -67494,7 +67494,7 @@ pub const OBCMCIELCIL = struct {
     pb: protobuf.ProtobufMixins(@This()) = .{},
     ODPGDAMHLMN: u32 = 0,
     type: PIBEGHMHJAM = @enumFromInt(0),
-    JGPGMFODMNN: i64 = 0,
+    end_timestamp: i64 = 0,
     JLLHKEGJKKJ: u32 = 0,
     ECJJCHACHIH: ManagedString = .Empty,
     DNBACIIDHCP: u32 = 0,
@@ -67510,7 +67510,7 @@ pub const OBCMCIELCIL = struct {
     pub const _desc_table = .{
         .ODPGDAMHLMN = fd(1, 6130, .{ .Varint = .Simple }),
         .type = fd(2, null, .{ .Varint = .Simple }),
-        .JGPGMFODMNN = fd(3, 11748, .{ .Varint = .Simple }),
+        .end_timestamp = fd(3, 11748, .{ .Varint = .Simple }),
         .JLLHKEGJKKJ = fd(4, 4329, .{ .Varint = .Simple }),
         .ECJJCHACHIH = fd(5, null, .String),
         .DNBACIIDHCP = fd(6, 12272, .{ .Varint = .Simple }),
@@ -68757,12 +68757,12 @@ pub const AKCLIPEJLEM = struct {
     pub const cmd_id: u16 = 8811;
 
     pb: protobuf.ProtobufMixins(@This()) = .{},
-    BAOCDLDEDOD: bool = false,
+    force_refresh: bool = false,
     HBPOFKFEFPP: u32 = 0,
     LDJPMKGBBGK: u32 = 0,
 
     pub const _desc_table = .{
-        .BAOCDLDEDOD = fd(7, null, .{ .Varint = .Simple }),
+        .force_refresh = fd(7, null, .{ .Varint = .Simple }),
         .HBPOFKFEFPP = fd(9, 5108, .{ .Varint = .Simple }),
         .LDJPMKGBBGK = fd(10, 14268, .{ .Varint = .Simple }),
     };
@@ -70862,12 +70862,12 @@ pub const BCMOOKPPOAA = struct {
     pb: protobuf.ProtobufMixins(@This()) = .{},
     IIOOHBDJOFB: ArrayList(OHNHOKEFONA) = .empty,
     PNFEIPAIEOC: PMHHHAHGMBG = @enumFromInt(0),
-    CILKAJCAJCJ: u32 = 0,
+    zone_id: u32 = 0,
 
     pub const _desc_table = .{
         .IIOOHBDJOFB = fd(3, null, .{ .List = .{ .SubMessage = {} } }),
         .PNFEIPAIEOC = fd(4, null, .{ .Varint = .Simple }),
-        .CILKAJCAJCJ = fd(14, 15969, .{ .Varint = .Simple }),
+        .zone_id = fd(14, 15969, .{ .Varint = .Simple }),
     };
 };
 
@@ -73875,7 +73875,7 @@ pub const NPNANGOPJKN = struct {
     HIGJIOCANMC: i64 = 0,
     IFIANKDAHEB: u32 = 0,
     EDJDCNHCPPG: u32 = 0,
-    JGPGMFODMNN: i64 = 0,
+    end_timestamp: i64 = 0,
     LGNNPDNBLJF: u32 = 0,
     NECOICCMLND: bool = false,
     MOCJFMHFADP: bool = false,
@@ -73892,7 +73892,7 @@ pub const NPNANGOPJKN = struct {
         .HIGJIOCANMC = fd(1, 5526, .{ .Varint = .Simple }),
         .IFIANKDAHEB = fd(2, 15171, .{ .Varint = .Simple }),
         .EDJDCNHCPPG = fd(3, 9722, .{ .Varint = .Simple }),
-        .JGPGMFODMNN = fd(4, 2853, .{ .Varint = .Simple }),
+        .end_timestamp = fd(4, 2853, .{ .Varint = .Simple }),
         .LGNNPDNBLJF = fd(5, 7023, .{ .Varint = .Simple }),
         .NECOICCMLND = fd(6, null, .{ .Varint = .Simple }),
         .MOCJFMHFADP = fd(8, null, .{ .Varint = .Simple }),
@@ -74912,13 +74912,13 @@ pub const JHDGDKHDHBB = struct {
 
 pub const DENIBLOFLDL = struct {
     pb: protobuf.ProtobufMixins(@This()) = .{},
-    HOLKHLMIGAH: i64 = 0,
-    JGPGMFODMNN: i64 = 0,
+    begin_timestamp: i64 = 0,
+    end_timestamp: i64 = 0,
     DFJCCOCFNJE: ArrayList(u32) = .empty,
 
     pub const _desc_table = .{
-        .HOLKHLMIGAH = fd(1, 16008, .{ .Varint = .Simple }),
-        .JGPGMFODMNN = fd(5, 417, .{ .Varint = .Simple }),
+        .begin_timestamp = fd(1, 16008, .{ .Varint = .Simple }),
+        .end_timestamp = fd(5, 417, .{ .Varint = .Simple }),
         .DFJCCOCFNJE = fd(8, null, .{ .PackedList = .{ .Varint = .Simple } }),
     };
 };
