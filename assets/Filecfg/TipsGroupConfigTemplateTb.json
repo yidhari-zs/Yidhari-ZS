@@ -971,11 +971,6 @@
       "priority": 1
     },
     {
-      "tips_group_id": 53019,
-      "group_icon": "UI/Sprite/A1DynamicLoad/IconRoleCircle/UnPacker/IconNPCCircle30215.png",
-      "priority": 1
-    },
-    {
       "tips_group_id": 54001,
       "group_icon": "UI/Sprite/A1DynamicLoad/IconRoleCircle/UnPacker/IconNPCCircle30070.png",
       "priority": 1
@@ -2439,11 +2434,6 @@
       "tips_group_id": 20000169,
       "group_icon": "",
       "priority": 0
-    },
-    {
-      "tips_group_id": 20000174,
-      "group_icon": "",
-      "priority": 1
     },
     {
       "tips_group_id": 20000175,

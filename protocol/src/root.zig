@@ -145,7 +145,7 @@ fn cmdNames(comptime T: type) [10_000]?[]const u8 {
 }
 
 pub const DummyMessage = struct {
-    pub const cmd_id = 1959;
+    pub const cmd_id = 6899;
     pb: protobuf.ProtobufMixins(@This()) = .{},
 
     pub const _desc_table = .{};

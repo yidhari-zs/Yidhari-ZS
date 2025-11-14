@@ -10405,6 +10405,490 @@
           "number": 4
         }
       ]
+    },
+    {
+      "skill_id": 1471001,
+      "avatar_id": 1471,
+      "min_avatar_level": 15,
+      "min_passive_skill_level": 1,
+      "unlock_passive_skill_level": 2,
+      "unk_5": 0,
+      "unk_levelup": "Avatar_PassiveSkill_CoreSkillLevelUp",
+      "unk_7": 0,
+      "unk_8": 0,
+      "unk_9": 0,
+      "unk_10": 0,
+      "propertys": [
+        {
+          "property": 20101,
+          "value": 480
+        },
+        {
+          "property": 12101,
+          "value": 0
+        }
+      ],
+      "names": [
+        "BanYue_UniqueSkill_Title"
+      ],
+      "descriptions": [
+        "BanYue_UniqueSkill_02_Desc"
+      ],
+      "materials_costs": [
+        {
+          "item_id": 10,
+          "number": 5000
+        }
+      ]
+    },
+    {
+      "skill_id": 1471002,
+      "avatar_id": 1471,
+      "min_avatar_level": 25,
+      "min_passive_skill_level": 2,
+      "unlock_passive_skill_level": 3,
+      "unk_5": 0,
+      "unk_levelup": "Avatar_PassiveSkill_CoreSkillLevelUp",
+      "unk_7": 0,
+      "unk_8": 0,
+      "unk_9": 0,
+      "unk_10": 0,
+      "propertys": [
+        {
+          "property": 20101,
+          "value": 480
+        },
+        {
+          "property": 12101,
+          "value": 25
+        }
+      ],
+      "names": [
+        "BanYue_UniqueSkill_Title"
+      ],
+      "descriptions": [
+        "BanYue_UniqueSkill_03_Desc"
+      ],
+      "materials_costs": [
+        {
+          "item_id": 10,
+          "number": 12000
+        },
+        {
+          "item_id": 110510,
+          "number": 2
+        }
+      ]
+    },
+    {
+      "skill_id": 1471003,
+      "avatar_id": 1471,
+      "min_avatar_level": 35,
+      "min_passive_skill_level": 3,
+      "unlock_passive_skill_level": 4,
+      "unk_5": 0,
+      "unk_levelup": "Avatar_PassiveSkill_CoreSkillLevelUp",
+      "unk_7": 0,
+      "unk_8": 0,
+      "unk_9": 0,
+      "unk_10": 0,
+      "propertys": [
+        {
+          "property": 20101,
+          "value": 960
+        },
+        {
+          "property": 12101,
+          "value": 25
+        }
+      ],
+      "names": [
+        "BanYue_UniqueSkill_Title"
+      ],
+      "descriptions": [
+        "BanYue_UniqueSkill_04_Desc"
+      ],
+      "materials_costs": [
+        {
+          "item_id": 10,
+          "number": 28000
+        },
+        {
+          "item_id": 110510,
+          "number": 4
+        }
+      ]
+    },
+    {
+      "skill_id": 1471004,
+      "avatar_id": 1471,
+      "min_avatar_level": 45,
+      "min_passive_skill_level": 4,
+      "unlock_passive_skill_level": 5,
+      "unk_5": 0,
+      "unk_levelup": "Avatar_PassiveSkill_CoreSkillLevelUp",
+      "unk_7": 0,
+      "unk_8": 0,
+      "unk_9": 0,
+      "unk_10": 0,
+      "propertys": [
+        {
+          "property": 20101,
+          "value": 960
+        },
+        {
+          "property": 12101,
+          "value": 50
+        }
+      ],
+      "names": [
+        "BanYue_UniqueSkill_Title"
+      ],
+      "descriptions": [
+        "BanYue_UniqueSkill_05_Desc"
+      ],
+      "materials_costs": [
+        {
+          "item_id": 10,
+          "number": 60000
+        },
+        {
+          "item_id": 110510,
+          "number": 9
+        },
+        {
+          "item_id": 110007,
+          "number": 2
+        }
+      ]
+    },
+    {
+      "skill_id": 1471005,
+      "avatar_id": 1471,
+      "min_avatar_level": 55,
+      "min_passive_skill_level": 5,
+      "unlock_passive_skill_level": 6,
+      "unk_5": 0,
+      "unk_levelup": "Avatar_PassiveSkill_CoreSkillLevelUp",
+      "unk_7": 0,
+      "unk_8": 0,
+      "unk_9": 0,
+      "unk_10": 0,
+      "propertys": [
+        {
+          "property": 20101,
+          "value": 1440
+        },
+        {
+          "property": 12101,
+          "value": 50
+        }
+      ],
+      "names": [
+        "BanYue_UniqueSkill_Title"
+      ],
+      "descriptions": [
+        "BanYue_UniqueSkill_06_Desc"
+      ],
+      "materials_costs": [
+        {
+          "item_id": 10,
+          "number": 100000
+        },
+        {
+          "item_id": 110510,
+          "number": 15
+        },
+        {
+          "item_id": 110007,
+          "number": 3
+        }
+      ]
+    },
+    {
+      "skill_id": 1471006,
+      "avatar_id": 1471,
+      "min_avatar_level": 60,
+      "min_passive_skill_level": 6,
+      "unlock_passive_skill_level": 7,
+      "unk_5": 0,
+      "unk_levelup": "Avatar_PassiveSkill_CoreSkillLevelUp",
+      "unk_7": 0,
+      "unk_8": 0,
+      "unk_9": 0,
+      "unk_10": 0,
+      "propertys": [
+        {
+          "property": 20101,
+          "value": 1440
+        },
+        {
+          "property": 12101,
+          "value": 75
+        }
+      ],
+      "names": [
+        "BanYue_UniqueSkill_Title"
+      ],
+      "descriptions": [
+        "BanYue_UniqueSkill_07_Desc"
+      ],
+      "materials_costs": [
+        {
+          "item_id": 10,
+          "number": 200000
+        },
+        {
+          "item_id": 110510,
+          "number": 30
+        },
+        {
+          "item_id": 110007,
+          "number": 4
+        }
+      ]
+    },
+    {
+      "skill_id": 1481001,
+      "avatar_id": 1481,
+      "min_avatar_level": 15,
+      "min_passive_skill_level": 1,
+      "unlock_passive_skill_level": 2,
+      "unk_5": 0,
+      "unk_levelup": "Avatar_PassiveSkill_CoreSkillLevelUp",
+      "unk_7": 0,
+      "unk_8": 0,
+      "unk_9": 0,
+      "unk_10": 0,
+      "propertys": [
+        {
+          "property": 20101,
+          "value": 480
+        },
+        {
+          "property": 12101,
+          "value": 0
+        }
+      ],
+      "names": [
+        "Azural_UniqueSkill_Title"
+      ],
+      "descriptions": [
+        "Azural_UniqueSkill_02_Desc"
+      ],
+      "materials_costs": [
+        {
+          "item_id": 10,
+          "number": 5000
+        }
+      ]
+    },
+    {
+      "skill_id": 1481002,
+      "avatar_id": 1481,
+      "min_avatar_level": 25,
+      "min_passive_skill_level": 2,
+      "unlock_passive_skill_level": 3,
+      "unk_5": 0,
+      "unk_levelup": "Avatar_PassiveSkill_CoreSkillLevelUp",
+      "unk_7": 0,
+      "unk_8": 0,
+      "unk_9": 0,
+      "unk_10": 0,
+      "propertys": [
+        {
+          "property": 20101,
+          "value": 480
+        },
+        {
+          "property": 12101,
+          "value": 25
+        }
+      ],
+      "names": [
+        "Azural_UniqueSkill_Title"
+      ],
+      "descriptions": [
+        "Azural_UniqueSkill_03_Desc"
+      ],
+      "materials_costs": [
+        {
+          "item_id": 10,
+          "number": 12000
+        },
+        {
+          "item_id": 110507,
+          "number": 2
+        }
+      ]
+    },
+    {
+      "skill_id": 1481003,
+      "avatar_id": 1481,
+      "min_avatar_level": 35,
+      "min_passive_skill_level": 3,
+      "unlock_passive_skill_level": 4,
+      "unk_5": 0,
+      "unk_levelup": "Avatar_PassiveSkill_CoreSkillLevelUp",
+      "unk_7": 0,
+      "unk_8": 0,
+      "unk_9": 0,
+      "unk_10": 0,
+      "propertys": [
+        {
+          "property": 20101,
+          "value": 960
+        },
+        {
+          "property": 12101,
+          "value": 25
+        }
+      ],
+      "names": [
+        "Azural_UniqueSkill_Title"
+      ],
+      "descriptions": [
+        "Azural_UniqueSkill_04_Desc"
+      ],
+      "materials_costs": [
+        {
+          "item_id": 10,
+          "number": 28000
+        },
+        {
+          "item_id": 110507,
+          "number": 4
+        }
+      ]
+    },
+    {
+      "skill_id": 1481004,
+      "avatar_id": 1481,
+      "min_avatar_level": 45,
+      "min_passive_skill_level": 4,
+      "unlock_passive_skill_level": 5,
+      "unk_5": 0,
+      "unk_levelup": "Avatar_PassiveSkill_CoreSkillLevelUp",
+      "unk_7": 0,
+      "unk_8": 0,
+      "unk_9": 0,
+      "unk_10": 0,
+      "propertys": [
+        {
+          "property": 20101,
+          "value": 960
+        },
+        {
+          "property": 12101,
+          "value": 50
+        }
+      ],
+      "names": [
+        "Azural_UniqueSkill_Title"
+      ],
+      "descriptions": [
+        "Azural_UniqueSkill_05_Desc"
+      ],
+      "materials_costs": [
+        {
+          "item_id": 10,
+          "number": 60000
+        },
+        {
+          "item_id": 110507,
+          "number": 9
+        },
+        {
+          "item_id": 110006,
+          "number": 2
+        }
+      ]
+    },
+    {
+      "skill_id": 1481005,
+      "avatar_id": 1481,
+      "min_avatar_level": 55,
+      "min_passive_skill_level": 5,
+      "unlock_passive_skill_level": 6,
+      "unk_5": 0,
+      "unk_levelup": "Avatar_PassiveSkill_CoreSkillLevelUp",
+      "unk_7": 0,
+      "unk_8": 0,
+      "unk_9": 0,
+      "unk_10": 0,
+      "propertys": [
+        {
+          "property": 20101,
+          "value": 1440
+        },
+        {
+          "property": 12101,
+          "value": 50
+        }
+      ],
+      "names": [
+        "Azural_UniqueSkill_Title"
+      ],
+      "descriptions": [
+        "Azural_UniqueSkill_06_Desc"
+      ],
+      "materials_costs": [
+        {
+          "item_id": 10,
+          "number": 100000
+        },
+        {
+          "item_id": 110507,
+          "number": 15
+        },
+        {
+          "item_id": 110006,
+          "number": 3
+        }
+      ]
+    },
+    {
+      "skill_id": 1481006,
+      "avatar_id": 1481,
+      "min_avatar_level": 60,
+      "min_passive_skill_level": 6,
+      "unlock_passive_skill_level": 7,
+      "unk_5": 0,
+      "unk_levelup": "Avatar_PassiveSkill_CoreSkillLevelUp",
+      "unk_7": 0,
+      "unk_8": 0,
+      "unk_9": 0,
+      "unk_10": 0,
+      "propertys": [
+        {
+          "property": 20101,
+          "value": 1440
+        },
+        {
+          "property": 12101,
+          "value": 75
+        }
+      ],
+      "names": [
+        "Azural_UniqueSkill_Title"
+      ],
+      "descriptions": [
+        "Azural_UniqueSkill_07_Desc"
+      ],
+      "materials_costs": [
+        {
+          "item_id": 10,
+          "number": 200000
+        },
+        {
+          "item_id": 110507,
+          "number": 30
+        },
+        {
+          "item_id": 110006,
+          "number": 4
+        }
+      ]
     }
   ]
 }

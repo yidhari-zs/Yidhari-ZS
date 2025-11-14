@@ -1241,46 +1241,6 @@
       "unk_3": 1
     },
     {
-      "item_id": 13019,
-      "weapon_name": "Weapon_A_Common_19",
-      "unk_missing_field": 0,
-      "base_property": {
-        "property": 12101,
-        "value": 40
-      },
-      "rand_property": {
-        "property": 11102,
-        "value": 1000
-      },
-      "star_limit": 4,
-      "exp_recycle": 6000,
-      "weapon_script_config": "Data/ScriptConfig/Character/Weapon_A_Common_19",
-      "weapon_ui_model": "UI/3D/Weapon/Weapon_A_Common_19",
-      "unk_1": 1,
-      "unk_missing_field_2": 0,
-      "unk_weapon_path": "Weapon/Weapon_A_Common_19",
-      "unk_missing_field_3": 0,
-      "refine_initial": 1,
-      "refine_limit": 5,
-      "unk_missing_field_4": 0,
-      "unk_missing_field_5": 1,
-      "unk_string_with_values": "10:9600,101015:3|10:22400,101025:10|10:48000,101025:16|10:80000,101035:8|10:160000,101035:16",
-      "unk_missing_field_6": 0,
-      "unk_2": 5,
-      "weapon_desc": "Item_Weapon_A_Common_19_Desc",
-      "weapon_release_tag": "",
-      "unk_empty_string": "",
-      "avatar_id": 0,
-      "weapon_comment": "",
-      "refine_costs": [
-        {
-          "item_id": 10,
-          "number": 1500
-        }
-      ],
-      "unk_3": 0
-    },
-    {
       "item_id": 13101,
       "weapon_name": "Weapon_A_1011",
       "unk_missing_field": 0,
@@ -3112,6 +3072,86 @@
       "unk_empty_string": "",
       "avatar_id": 1461,
       "weapon_comment": "Weapon_S_1461_Comment",
+      "refine_costs": [
+        {
+          "item_id": 10,
+          "number": 2000
+        }
+      ],
+      "unk_3": 1
+    },
+    {
+      "item_id": 14147,
+      "weapon_name": "Weapon_S_1471",
+      "unk_missing_field": 0,
+      "base_property": {
+        "property": 12101,
+        "value": 48
+      },
+      "rand_property": {
+        "property": 11102,
+        "value": 1200
+      },
+      "star_limit": 4,
+      "exp_recycle": 30000,
+      "weapon_script_config": "Data/ScriptConfig/Character/Weapon_S_1471",
+      "weapon_ui_model": "UI/3D/Weapon/Weapon_S_1471",
+      "unk_1": 1,
+      "unk_missing_field_2": 0,
+      "unk_weapon_path": "Weapon/Weapon_S_1471",
+      "unk_missing_field_3": 0,
+      "refine_initial": 1,
+      "refine_limit": 5,
+      "unk_missing_field_4": 0,
+      "unk_missing_field_5": 0,
+      "unk_string_with_values": "10:12000,101015:4|10:28000,101025:12|10:60000,101025:20|10:100000,101035:10|10:200000,101035:20",
+      "unk_missing_field_6": 0,
+      "unk_2": 6,
+      "weapon_desc": "Item_Weapon_S_1471_Desc",
+      "weapon_release_tag": "BanYue_release",
+      "unk_empty_string": "",
+      "avatar_id": 1471,
+      "weapon_comment": "Weapon_S_1471_Comment",
+      "refine_costs": [
+        {
+          "item_id": 10,
+          "number": 2000
+        }
+      ],
+      "unk_3": 1
+    },
+    {
+      "item_id": 14148,
+      "weapon_name": "Weapon_S_1481",
+      "unk_missing_field": 0,
+      "base_property": {
+        "property": 12101,
+        "value": 48
+      },
+      "rand_property": {
+        "property": 20103,
+        "value": 960
+      },
+      "star_limit": 4,
+      "exp_recycle": 30000,
+      "weapon_script_config": "Data/ScriptConfig/Character/Weapon_S_1481",
+      "weapon_ui_model": "UI/3D/Weapon/Weapon_S_1481",
+      "unk_1": 1,
+      "unk_missing_field_2": 0,
+      "unk_weapon_path": "Weapon/Weapon_S_1481",
+      "unk_missing_field_3": 0,
+      "refine_initial": 1,
+      "refine_limit": 5,
+      "unk_missing_field_4": 0,
+      "unk_missing_field_5": 0,
+      "unk_string_with_values": "10:12000,101011:4|10:28000,101021:12|10:60000,101021:20|10:100000,101031:10|10:200000,101031:20",
+      "unk_missing_field_6": 0,
+      "unk_2": 2,
+      "weapon_desc": "Item_Weapon_S_1481_Desc",
+      "weapon_release_tag": "",
+      "unk_empty_string": "",
+      "avatar_id": 1481,
+      "weapon_comment": "Weapon_S_1481_Comment",
       "refine_costs": [
         {
           "item_id": 10,

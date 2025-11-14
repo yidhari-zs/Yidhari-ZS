@@ -361,7 +361,7 @@
       "audio_bank": "BK_XiaoZhao|BK_CHR_Common|BK_XiaoZhao_VO",
       "unk_1": 0,
       "gender": 2,
-      "camp": 12
+      "camp": 0
     },
     {
       "id": 1351,
@@ -603,17 +603,6 @@
       "audio_bank": "BK_Eous",
       "unk_1": 0,
       "gender": 0,
-      "camp": 0
-    },
-    {
-      "id": 2041,
-      "code_name": "Avatar_Female_Size02_Zhenzhen_En",
-      "name": "Avatar_Female_Size02_Zhenzhen",
-      "full_name": "Avatar_Female_Size02_Zhenzhen_FullName",
-      "audio_event_replace_param": "zhenzhen",
-      "audio_bank": "BK_Zhenzhen",
-      "unk_1": 0,
-      "gender": 2,
       "camp": 0
     }
   ]
